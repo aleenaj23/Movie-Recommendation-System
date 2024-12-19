@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='filter.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='filter.js') }}"></script>
+</head>
+<body>
+  <div class="display_container">
+    <h2 style = "color: #fff;">
+      Suggestions for you...
+    </h2>
+    <div class="movie-content">
+        {% for poster, title in movie_cards.items() if not movie_cards.hidden %}
+          <div class="card" style="width: 15rem;margin: 10px 0; background-color: transparent;box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;" title="{{title}}" onclick="recommendcard(this)">
+            <div class="imghvr">
+              <img class="card-img-top" style = "border-radius: 10px;" height="360" width="240" alt="{{title}} - poster" src={{poster}}>
+              <!-- <figcaption class="fig">
+                <button class="card-btn btn btn-danger" style = "background-color: #1db954; border: 0"> Click Me </button>
+              </figcaption> -->
+            </div>
+            <div class="card-body">
+              <h5 class="card-title" style = "color: #000">{{title|capitalize}}</h5>
+            </div>
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

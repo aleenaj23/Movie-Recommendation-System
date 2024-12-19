@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Preference</title>
+    <!-- <link rel="stylesheet" href="/../static/style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="language-option" id = "malayalam">
+            <div class="content">
+              <p class="heading">MALAYALAM
+              </p><p class="para">
+                Let's dive deep into the world of Malayalam cinema!
+                Tell me about the Malayalam films you've loved, and 
+                I can suggest over 1000+ more movies tailored to your taste.
+              </p>
+              <!-- <button class="btn">Read more</button> -->
+            </div>
+          </div>
+          <div class="language-option" id = "english">
+            <div class="content">
+              <p class="heading">ENGLISH
+              </p><p class="para">
+                Unleash your inner cinephile!  I can be your guide 
+                through the vast landscape of English language films 
+                over 7,000. Tell me what tickles your fancy, 
+                and I'll curate a personalized list based on your favorites.
+              </p>
+              <!-- <button class="btn">Read more</button> -->
+            </div>
+          </div>
+    </div>
+    
+    <!-- <script src="/../static/script.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='filter.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='filter.js') }}"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="area">
+            <div class="question_box">
+                <h2 id = "question">
+                    
+                </h2>
+            </div>
+            <div class="options">
+                <div class="each_option" id = "choices">
+                </div>
+            </div>
+            <button class="next_button">
+                Next
+            </button>
+        </div>
+    </div>
+    <div class="sidebar">
+        <nav class="navigation-bar">
+            <div class="nav-icons">
+                        <span class="material-symbols-outlined" id = "home">home</span> 
+            </div>
+            <div class="nav-icons">
+                <span class="material-symbols-outlined" id="gallery">gallery_thumbnail</span> 
+            </div>
+            <div class="nav-icons">
+                <span class="material-symbols-outlined" id = "recommend">featured_play_list</span>
+            </div>
+            <div class="nav-icons">
+                <span class="material-symbols-outlined" id="filter" style = "color: #fff;">filter_alt</span>
+            </div>
+            
+            <div class="nav-icons">
+                <span class="material-symbols-outlined" id = "features">stack_star</span>
+            </div>
+        </nav>
+        <div class="nav-hover">
+            <div class="nav-hover-nav">
+                <p id = "home-tab">Home</p>
+                <p id = "gallery-tab">Gallery</p>
+                <p id = "recommendation-tab">Recommendation</p>
+                <p id = "filter-tab">Filter</p>
+                <p id = "features-tab">Features</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

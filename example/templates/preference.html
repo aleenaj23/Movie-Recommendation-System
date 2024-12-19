@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Preference</title>
+    <!-- <link rel="stylesheet" href="/../static/style.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body >
+    <!-- <nav class="navbar">
+        <a href="#" class="nav-brand">My Website</a>
+        <button class="nav-toggle" aria-controls="nav-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link">Option 1</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Option 2</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Option 3</a></li>
+        </ul>
+        <a href="#" class="nav-link nav-back">Back</a>
+      </nav> -->
+    
+    <div class="container">
+        <h3 >Choose Your Preference</h3>
+        <div id="language-form">
+            <!-- <div class="language-option">
+                <div class = "options" onclick="location.href='lang.html'">
+                    FILTERING
+                </div>
+                
+            </div>
+            <div class="language-option">
+                
+                <div class = "options" onclick="location.href='lang.html'">
+                    MOVIE RECOMMENDATION
+                </div>
+            </div> -->
+            <div style = "display: flex;">
+                <div class="flip-card">
+                    <!-- ---------------DON'T EDIT THE ID---------------------- -->
+                    <div class="flip-card-inner" id = "filtering">
+                        <div class="flip-card-front">
+                            <p class="title" style = "font-size: 1.5em;font-weight: 900;text-align: center; margin: 0;">FILTERING</p>
+                            <p></p>
+                        </div>
+                        <div class="flip-card-back" >
+                            <p class="title"></p>
+                            <p>filter the movies according to ur favorite actor, director etc.</p>
+                        </div>
+                    </div>
+                    <!-- ---------------DON'T EDIT THE ID---------------------- -->
+                </div>
+                <div class="flip-card">
+                    <!-- ---------------DON'T EDIT THE ID---------------------- -->
+                    <div class="flip-card-inner" id = "recommendation">
+                        <div class="flip-card-front">
+                            <p class="title" style = "font-size: 1.5em;font-weight: 900;text-align: center; margin: 0;">MOVIE RECOMMENDATION</p>
+                            <p></p>
+                        </div>
+                        <div class="flip-card-back" >
+                            <p class="title"></p>
+                            <p>Movie suggestions are given from a selected movie</p>
+                        </div>
+                    </div>
+                    <!-- ---------------DON'T EDIT THE ID---------------------- -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 style = "color:#fff;">{{language}}</h1>
+    <!-- <script src="/../static/script.js"></script> -->
+</body>
+</html>

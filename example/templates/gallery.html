@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='gallery.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+</head>
+<body>
+    <div class="container">
+        add a div here for all posters
+        <div class="all_posters">
+            <div class="latest-releases">
+                <div class = "latest-releases-title">
+                    <h2>Latest Releases</h2>
+                </div>
+                
+                <div class="latest-posters">
+                    {% for poster in new_poster %}
+                        <div class="poster-card">
+                            <img  class = "poster-card-img" src = {{poster}} onclick="recommendcard(this)">   
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="latest-poster-scroll" style = "position: absolute; top: 60px;">
+                    <div class="poster_scroll">
+                        <span class="material-symbols-outlined" style = "color: #fff;">chevron_left</span>
+                    </div>
+                    <div class="poster_scroll">
+                        <span class="material-symbols-outlined" style = "color: #fff;">chevron_right</span>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-releases" style = "position: absolute; top:320px">
+                <div class = "latest-releases-title">
+                    <h2>90's Favourite</h2>
+                </div>
+                <div class="latest-posters">
+                    {% for poster in old_poster %}
+                        <div class="poster-card">
+                            <img  class = "poster-card-img" src = {{poster}} onclick="recommendcard(this)">   
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="latest-poster-scroll" style = "position: absolute; top: 60px;">
+                    <div class="poster_scroll">
+                        <span class="material-symbols-outlined" style = "color: #fff;">chevron_left</span>
+                    </div>
+                    <div class="poster_scroll">
+                        <span class="material-symbols-outlined" style = "color: #fff;">chevron_right</span>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-releases" style = "position: absolute; top:650px">
+                <div class = "latest-releases-title">
+                    <h2>Top Actors</h2>
+                </div>
+                <div class="latest-posters">
+                    {% for poster in actor %}
+                        <div class="poster-card">
+                            <img  class = "poster-card-img" src = {{poster}} onclick="recommendcard(this)">   
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="latest-poster-scroll" style = "position: absolute; top: 60px;">
+                    <div class="poster_scroll">
+                        <span class="material-symbols-outlined" style = "color: #fff;">chevron_left</span>
+                    </div>
+                    <div class="poster_scroll">
+                        <span class="material-symbols-outlined" style = "color: #fff;">chevron_right</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <nav class="navigation-bar">
+                <div class="nav-icons">
+                            <span class="material-symbols-outlined" id = "home">home</span> 
+                </div>
+                <div class="nav-icons">
+                    <span class="material-symbols-outlined" id="gallery" style = "color: #fff;">gallery_thumbnail</span> 
+                </div>
+                <div class="nav-icons">
+                    <span class="material-symbols-outlined" id = "recommend">featured_play_list</span>
+                </div>
+                <div class="nav-icons">
+                    <span class="material-symbols-outlined" id="filter">filter_alt</span>
+                </div>
+                
+                <div class="nav-icons">
+                    <span class="material-symbols-outlined" id = "features">stack_star</span>
+                </div>
+            </nav>
+            <div class="nav-hover">
+                <div class="nav-hover-nav">
+                    <p>Home</p>
+                    <p>Gallery</p>
+                    <p>Recommendation</p>
+                    <p>Filter</p>
+                    <p>Features</p>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <script src="{{ url_for('static', filename='gallery.js') }}"></script>
+</body>
+</html>

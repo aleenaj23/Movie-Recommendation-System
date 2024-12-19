@@ -1,0 +1,791 @@
+<html lang="en-US" class="js"><head>
+   <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="pingback" href="https://www.sussexprinting.com/xmlrpc.php">
+    <link rel="stylesheet" href="/../static/filim.css">
+   <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XG0W5044KC&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-176572014-26&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript">
+       document.documentElement.className = 'js';
+   </script>
+   
+   <title>MOVIE RECOMMENTATION SYSTEM</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Sussex Printing Corporation » Feed" href="https://www.sussexprinting.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Sussex Printing Corporation » Comments Feed" href="https://www.sussexprinting.com/comments/feed/">
+<meta content="Divi Child v.0.1.1" name="generator"><style id="wp-block-library-theme-inline-css" type="text/css">
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:#ffffffa6}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:#ffffffa6}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #000000;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="magnific-popup-css" href="https://www.sussexprinting.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/css/magnific_popup.css?ver=2.5.3" type="text/css" media="all">
+<link rel="stylesheet" id="dsm-animate-css" href="https://www.sussexprinting.com/wp-content/plugins/supreme-modules-for-divi/public/css/animate.css?ver=2.5.3" type="text/css" media="all">
+<link rel="stylesheet" id="et-divi-open-sans-css" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,latin-ext&amp;display=swap" type="text/css" media="all">
+<link rel="stylesheet" id="supreme-modules-for-divi-styles-css" href="https://www.sussexprinting.com/wp-content/plugins/supreme-modules-for-divi/styles/style.min.css?ver=2.5.3" type="text/css" media="all">
+<link rel="stylesheet" id="pojo-a11y-css" href="https://www.sussexprinting.com/wp-content/plugins/pojo-accessibility/assets/css/style.min.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="divi-style-parent-css" href="https://www.sussexprinting.com/wp-content/themes/Divi/style-static.min.css?ver=4.24.2" type="text/css" media="all">
+<link rel="stylesheet" id="divi-style-css" href="https://www.sussexprinting.com/wp-content/themes/Divi-Child/style.css?ver=4.24.2" type="text/css" media="all">
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-TWZK68Z" id="google_gtagjs-js" async=""></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["www.sussexprinting.com"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TWZK68Z");
+/* ]]> */
+</script>
+
+<!-- End Google Analytics snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="https://www.sussexprinting.com/wp-json/"><link rel="alternate" type="application/json" href="https://www.sussexprinting.com/wp-json/wp/v2/pages/15"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sussexprinting.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.5.3">
+<link rel="shortlink" href="https://www.sussexprinting.com/">
+<link rel="alternate" type="application/json+oembed" href="https://www.sussexprinting.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sussexprinting.com%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.sussexprinting.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sussexprinting.com%2F&amp;format=xml">
+<meta name="generator" content="Site Kit by Google 1.123.1"><!-- SEO meta tags powered by SmartCrawl https://wpmudev.com/project/smartcrawl-wordpress-seo/ -->
+<link rel="canonical" href="https://www.sussexprinting.com/">
+<meta name="description" content="Our customers have been trusting us with all of their printing needs since 1959. With great customer service and unequaled quality control that is second to ...">
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Corporation","@id":"https:\/\/www.sussexprinting.com\/#schema-publishing-organization","url":"https:\/\/www.sussexprinting.com","name":"Sussex Printing Corporation","logo":{"@type":"ImageObject","@id":"https:\/\/www.sussexprinting.com\/#schema-organization-logo","url":"https:\/\/www.sussexprinting.com\/wp-content\/uploads\/2022\/05\/SussexPrinting2022_BlueGradient_D2.png","height":60,"width":60},"image":{"@type":"ImageObject","@id":"https:\/\/www.sussexprinting.com\/#schema-organization-logo","url":"https:\/\/www.sussexprinting.com\/wp-content\/uploads\/2022\/05\/SussexPrinting2022_BlueGradient_D2.png","height":60,"width":60},"description":"Delmarva&#039;s Premier Printer Since 1959","contactPoint":{"@type":"ContactPoint","contactType":"customer support","telephone":"302.629.5060","url":"https:\/\/www.sussexprinting.com\/"}},{"@type":"WebSite","@id":"https:\/\/www.sussexprinting.com\/#schema-website","url":"https:\/\/www.sussexprinting.com","name":"Sussex Printing Corporation","encoding":"UTF-8","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.sussexprinting.com\/search\/{search_term_string}\/","query-input":"required name=search_term_string"},"image":{"@type":"ImageObject","@id":"https:\/\/www.sussexprinting.com\/#schema-site-logo","url":"https:\/\/www.sussexprinting.com\/wp-content\/uploads\/2022\/05\/SussexPrinting2022_BlueGradient_D2.png","height":229,"width":1000}},{"@type":"BreadcrumbList","@id":"https:\/\/www.sussexprinting.com\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"Person","@id":"https:\/\/www.sussexprinting.com\/author\/orourkemg\/#schema-author","name":"OrourkeMG","url":"https:\/\/www.sussexprinting.com\/author\/orourkemg\/"},{"@type":"ContactPage","@id":"https:\/\/www.sussexprinting.com\/#schema-webpage","isPartOf":"https:\/\/www.sussexprinting.com\/#schema-website","hasPart":[{"@type":"SiteNavigationElement","@id":"https:\/\/www.sussexprinting.com\/#schema-nav-element-29","name":"","url":"https:\/\/www.sussexprinting.com\/"},{"@type":"SiteNavigationElement","@id":"https:\/\/www.sussexprinting.com\/#schema-nav-element-30","name":"About","url":"https:\/\/www.sussexprinting.com\/#about"},{"@type":"SiteNavigationElement","@id":"https:\/\/www.sussexprinting.com\/#schema-nav-element-31","name":"Services","url":"https:\/\/www.sussexprinting.com\/#services"},{"@type":"SiteNavigationElement","@id":"https:\/\/www.sussexprinting.com\/#schema-nav-element-32","name":"Products","url":"https:\/\/www.sussexprinting.com\/#products"},{"@type":"SiteNavigationElement","@id":"https:\/\/www.sussexprinting.com\/#schema-nav-element-34","name":"Contact Us","url":"https:\/\/www.sussexprinting.com\/#contact"},{"@type":"SiteNavigationElement","@id":"https:\/\/www.sussexprinting.com\/#schema-nav-element-77","name":"","url":"https:\/\/www.sussexprinting.com\/request-a-quote\/"}],"url":"https:\/\/www.sussexprinting.com\/","author":{"@id":"https:\/\/www.sussexprinting.com\/author\/orourkemg\/#schema-author"},"publisher":{"@id":"https:\/\/www.sussexprinting.com\/#schema-publishing-organization"},"dateModified":"2022-05-31T15:27:57","datePublished":"2022-05-11T16:46:33","headline":"Sussex Printing Delmarva's Premier Printer Since 1959","description":"Our customers have been trusting us with all of their printing needs since 1959. With great customer service and unequaled quality control that is second to ...","name":"Home"}]}</script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.sussexprinting.com/">
+<meta property="og:title" content="Sussex Printing Delmarva's Premier Printer Since 1959">
+<meta property="og:description" content="Our customers have been trusting us with all of their printing needs since 1959. With great customer service and unequaled quality control that is second to ...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sussex Printing Delmarva's Premier Printer Since 1959">
+<meta name="twitter:description" content="Our customers have been trusting us with all of their printing needs since 1959. With great customer service and unequaled quality control that is second to ...">
+<!-- /SEO -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><style type="text/css">
+#pojo-a11y-toolbar .pojo-a11y-toolbar-toggle a{ background-color: #00487a;  color: #000000;
+;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay, #pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items.pojo-a11y-links{ border-color: #00487a;}
+body.pojo-a11y-focusable a:focus{ outline-style: solid !important;  outline-width: 1px !important;  outline-color: #FF0000 !important;}
+#pojo-a11y-toolbar{ top: 200px !important;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay{ background-color: #000000;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items li.pojo-a11y-toolbar-item a, #pojo-a11y-toolbar .pojo-a11y-toolbar-overlay p.pojo-a11y-toolbar-title{ color: #333333;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items li.pojo-a11y-toolbar-item a.active{ background-color: #00487a; color: #000000;}
+@media (max-width: 767px) { #pojo-a11y-toolbar { top: 150px !important; } }</style><link rel="stylesheet" href="https://use.typekit.net/mdo8cnl.css"><link rel="icon" href="https://www.sussexprinting.com/wp-content/uploads/2022/05/cropped-Favicon_D2-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.sussexprinting.com/wp-content/uploads/2022/05/cropped-Favicon_D2-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.sussexprinting.com/wp-content/uploads/2022/05/cropped-Favicon_D2-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.sussexprinting.com/wp-content/uploads/2022/05/cropped-Favicon_D2-270x270.png">
+<style id="et-divi-customizer-global-cached-inline-styles">.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,.et_nav_text_color_light .et_mobile_menu li a,.et_nav_text_color_dark .et_mobile_menu li a,#et_search_icon:before,.et_search_form_container input,span.et_close_search_field:after,#et-top-navigation .et-cart-info{color:rgba(0,57,105,0.76)}.et_search_form_container input::-moz-placeholder{color:rgba(0,57,105,0.76)}.et_search_form_container input::-webkit-input-placeholder{color:rgba(0,57,105,0.76)}.et_search_form_container input:-ms-input-placeholder{color:rgba(0,57,105,0.76)}#main-header .nav li ul a{color:rgba(0,0,0,0.7)}#top-menu li a{font-size:18px}body.et_vertical_nav .container.et_search_form_container .et-search-form input{font-size:18px!important}#top-menu li a,.et_search_form_container input{font-weight:bold;font-style:normal;text-transform:none;text-decoration:none}.et_search_form_container input::-moz-placeholder{font-weight:bold;font-style:normal;text-transform:none;text-decoration:none}.et_search_form_container input::-webkit-input-placeholder{font-weight:bold;font-style:normal;text-transform:none;text-decoration:none}.et_search_form_container input:-ms-input-placeholder{font-weight:bold;font-style:normal;text-transform:none;text-decoration:none}#top-menu li.current-menu-ancestor>a,#top-menu li.current-menu-item>a,#top-menu li.current_page_item>a{color:#003969}.footer-widget .et_pb_widget div,.footer-widget .et_pb_widget ul,.footer-widget .et_pb_widget ol,.footer-widget .et_pb_widget label{line-height:1.7em}#et-footer-nav .bottom-nav li.current-menu-item a{color:#2ea3f2}body .et_pb_bg_layout_light.et_pb_button:hover,body .et_pb_bg_layout_light .et_pb_button:hover,body .et_pb_button:hover{border-radius:0px}@media only screen and (min-width:981px){.et_pb_svg_logo #logo{height:91%} #logo{max-height:91%}.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container,.et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container{height:11.88px}.et-fixed-header #top-menu li a{font-size:14px}}@media only screen and (min-width:1350px){.et_pb_row{padding:27px 0}.et_pb_section{padding:54px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:81px}.et_pb_fullwidth_section{padding:0}}@media only screen and (max-width:980px){.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_mobile_menu li a,.mobile_menu_bar:before,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,#et_search_icon:before,#et_top_search .et-search-form input,.et_search_form_container input,#et-top-navigation .et-cart-info{color:rgba(0,0,0,0.6)}.et_close_search_field:after{color:rgba(0,0,0,0.6)!important}.et_search_form_container input::-moz-placeholder{color:rgba(0,0,0,0.6)}.et_search_form_container input::-webkit-input-placeholder{color:rgba(0,0,0,0.6)}.et_search_form_container input:-ms-input-placeholder{color:rgba(0,0,0,0.6)}}h1,h2,h3,h4{font-family:fatfrank,sans-serif;font-weight:400;font-style:normal}@media only screen and (max-width:1050px){.et_mobile_nav_menu{display:block}#top-menu{display:none}}</style>
+   </head>
+
+<body class="home page-template-default page page-id-15 et-tb-has-template et-tb-has-footer et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_smooth_scroll et_no_sidebar et_divi_theme et-db chrome"><a id="pojo-a11y-skip-content" class="pojo-skip-link pojo-skip-content" tabindex="1" accesskey="s" href="#content">Skip to content</a><nav id="pojo-a11y-toolbar" class="pojo-a11y-toolbar-right pojo-a11y-" role="navigation">
+           <div class="pojo-a11y-toolbar-toggle">
+               <a class="pojo-a11y-toolbar-link pojo-a11y-toolbar-toggle-link" href="javascript:void(0);" title="Accessibility Tools" role="button">
+                   <span class="pojo-sr-only sr-only">Open toolbar</span>
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" width="1em">
+                       <title>Accessibility Tools</title>
+                       <g><path d="M60.4,78.9c-2.2,4.1-5.3,7.4-9.2,9.8c-4,2.4-8.3,3.6-13,3.6c-6.9,0-12.8-2.4-17.7-7.3c-4.9-4.9-7.3-10.8-7.3-17.7c0-5,1.4-9.5,4.1-13.7c2.7-4.2,6.4-7.2,10.9-9.2l-0.9-7.3c-6.3,2.3-11.4,6.2-15.3,11.8C7.9,54.4,6,60.6,6,67.3c0,5.8,1.4,11.2,4.3,16.1s6.8,8.8,11.7,11.7c4.9,2.9,10.3,4.3,16.1,4.3c7,0,13.3-2.1,18.9-6.2c5.7-4.1,9.6-9.5,11.7-16.2l-5.7-11.4C63.5,70.4,62.5,74.8,60.4,78.9z"></path><path d="M93.8,71.3l-11.1,5.5L70,51.4c-0.6-1.3-1.7-2-3.2-2H41.3l-0.9-7.2h22.7v-7.2H39.6L37.5,19c2.5,0.3,4.8-0.5,6.7-2.3c1.9-1.8,2.9-4,2.9-6.6c0-2.5-0.9-4.6-2.6-6.3c-1.8-1.8-3.9-2.6-6.3-2.6c-2,0-3.8,0.6-5.4,1.8c-1.6,1.2-2.7,2.7-3.2,4.6c-0.3,1-0.4,1.8-0.3,2.3l5.4,43.5c0.1,0.9,0.5,1.6,1.2,2.3c0.7,0.6,1.5,0.9,2.4,0.9h26.4l13.4,26.7c0.6,1.3,1.7,2,3.2,2c0.6,0,1.1-0.1,1.6-0.4L97,77.7L93.8,71.3z"></path></g>                    </svg>
+               </a>
+           </div>
+           <div class="pojo-a11y-toolbar-overlay">
+               <div class="pojo-a11y-toolbar-inner">
+                   <p class="pojo-a11y-toolbar-title">Accessibility Tools</p>
+                   
+                   <ul class="pojo-a11y-toolbar-items pojo-a11y-tools">
+                                                                           <li class="pojo-a11y-toolbar-item">
+                               <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-plus" data-action="resize-plus" data-action-group="resize" tabindex="-1" role="button">
+                                   <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Increase Text</title><path fill="currentColor" d="M256 200v16c0 4.25-3.75 8-8 8h-56v56c0 4.25-3.75 8-8 8h-16c-4.25 0-8-3.75-8-8v-56h-56c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h56v-56c0-4.25 3.75-8 8-8h16c4.25 0 8 3.75 8 8v56h56c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Increase Text</span>                               </a>
+                           </li>
+                           
+                           <li class="pojo-a11y-toolbar-item">
+                               <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-minus" data-action="resize-minus" data-action-group="resize" tabindex="-1" role="button">
+                                   <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Decrease Text</title><path fill="currentColor" d="M256 200v16c0 4.25-3.75 8-8 8h-144c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h144c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Decrease Text</span>                              </a>
+                           </li>
+                       
+                                                   <li class="pojo-a11y-toolbar-item">
+                               <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-grayscale" data-action="grayscale" data-action-group="schema" tabindex="-1" role="button">
+                                   <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Grayscale</title><path fill="currentColor" d="M15.75 384h-15.75v-352h15.75v352zM31.5 383.75h-8v-351.75h8v351.75zM55 383.75h-7.75v-351.75h7.75v351.75zM94.25 383.75h-7.75v-351.75h7.75v351.75zM133.5 383.75h-15.5v-351.75h15.5v351.75zM165 383.75h-7.75v-351.75h7.75v351.75zM180.75 383.75h-7.75v-351.75h7.75v351.75zM196.5 383.75h-7.75v-351.75h7.75v351.75zM235.75 383.75h-15.75v-351.75h15.75v351.75zM275 383.75h-15.75v-351.75h15.75v351.75zM306.5 383.75h-15.75v-351.75h15.75v351.75zM338 383.75h-15.75v-351.75h15.75v351.75zM361.5 383.75h-15.75v-351.75h15.75v351.75zM408.75 383.75h-23.5v-351.75h23.5v351.75zM424.5 383.75h-8v-351.75h8v351.75zM448 384h-15.75v-352h15.75v352z"></path></svg></span><span class="pojo-a11y-toolbar-text">Grayscale</span>                                </a>
+                           </li>
+                       
+                                                   <li class="pojo-a11y-toolbar-item">
+                               <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-high-contrast" data-action="high-contrast" data-action-group="schema" tabindex="-1" role="button">
+                                   <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>High Contrast</title><path fill="currentColor" d="M192 360v-272c-75 0-136 61-136 136s61 136 136 136zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path></svg></span><span class="pojo-a11y-toolbar-text">High Contrast</span>                             </a>
+                           </li>
+                       
+                                                   <li class="pojo-a11y-toolbar-item">
+                               <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-negative-contrast" data-action="negative-contrast" data-action-group="schema" tabindex="-1" role="button">
+
+                                   <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Negative Contrast</title><path fill="currentColor" d="M416 240c-23.75-36.75-56.25-68.25-95.25-88.25 10 17 15.25 36.5 15.25 56.25 0 61.75-50.25 112-112 112s-112-50.25-112-112c0-19.75 5.25-39.25 15.25-56.25-39 20-71.5 51.5-95.25 88.25 42.75 66 111.75 112 192 112s149.25-46 192-112zM236 144c0-6.5-5.5-12-12-12-41.75 0-76 34.25-76 76 0 6.5 5.5 12 12 12s12-5.5 12-12c0-28.5 23.5-52 52-52 6.5 0 12-5.5 12-12zM448 240c0 6.25-2 12-5 17.25-46 75.75-130.25 126.75-219 126.75s-173-51.25-219-126.75c-3-5.25-5-11-5-17.25s2-12 5-17.25c46-75.5 130.25-126.75 219-126.75s173 51.25 219 126.75c3 5.25 5 11 5 17.25z"></path></svg></span><span class="pojo-a11y-toolbar-text">Negative Contrast</span>                              </a>
+                           </li>
+                       
+                                                   <li class="pojo-a11y-toolbar-item">
+                               <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-light-background" data-action="light-background" data-action-group="schema" tabindex="-1" role="button">
+                                   <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Light Background</title><path fill="currentColor" d="M184 144c0 4.25-3.75 8-8 8s-8-3.75-8-8c0-17.25-26.75-24-40-24-4.25 0-8-3.75-8-8s3.75-8 8-8c23.25 0 56 12.25 56 40zM224 144c0-50-50.75-80-96-80s-96 30-96 80c0 16 6.5 32.75 17 45 4.75 5.5 10.25 10.75 15.25 16.5 17.75 21.25 32.75 46.25 35.25 74.5h57c2.5-28.25 17.5-53.25 35.25-74.5 5-5.75 10.5-11 15.25-16.5 10.5-12.25 17-29 17-45zM256 144c0 25.75-8.5 48-25.75 67s-40 45.75-42 72.5c7.25 4.25 11.75 12.25 11.75 20.5 0 6-2.25 11.75-6.25 16 4 4.25 6.25 10 6.25 16 0 8.25-4.25 15.75-11.25 20.25 2 3.5 3.25 7.75 3.25 11.75 0 16.25-12.75 24-27.25 24-6.5 14.5-21 24-36.75 24s-30.25-9.5-36.75-24c-14.5 0-27.25-7.75-27.25-24 0-4 1.25-8.25 3.25-11.75-7-4.5-11.25-12-11.25-20.25 0-6 2.25-11.75 6.25-16-4-4.25-6.25-10-6.25-16 0-8.25 4.5-16.25 11.75-20.5-2-26.75-24.75-53.5-42-72.5s-25.75-41.25-25.75-67c0-68 64.75-112 128-112s128 44 128 112z"></path></svg></span><span class="pojo-a11y-toolbar-text">Light Background</span>                               </a>
+                           </li>
+                       
+                                                   <li class="pojo-a11y-toolbar-item">
+                               <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-links-underline" data-action="links-underline" data-action-group="toggle" tabindex="-1" role="button">
+                                   <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Links Underline</title><path fill="currentColor" d="M364 304c0-6.5-2.5-12.5-7-17l-52-52c-4.5-4.5-10.75-7-17-7-7.25 0-13 2.75-18 8 8.25 8.25 18 15.25 18 28 0 13.25-10.75 24-24 24-12.75 0-19.75-9.75-28-18-5.25 5-8.25 10.75-8.25 18.25 0 6.25 2.5 12.5 7 17l51.5 51.75c4.5 4.5 10.75 6.75 17 6.75s12.5-2.25 17-6.5l36.75-36.5c4.5-4.5 7-10.5 7-16.75zM188.25 127.75c0-6.25-2.5-12.5-7-17l-51.5-51.75c-4.5-4.5-10.75-7-17-7s-12.5 2.5-17 6.75l-36.75 36.5c-4.5 4.5-7 10.5-7 16.75 0 6.5 2.5 12.5 7 17l52 52c4.5 4.5 10.75 6.75 17 6.75 7.25 0 13-2.5 18-7.75-8.25-8.25-18-15.25-18-28 0-13.25 10.75-24 24-24 12.75 0 19.75 9.75 28 18 5.25-5 8.25-10.75 8.25-18.25zM412 304c0 19-7.75 37.5-21.25 50.75l-36.75 36.5c-13.5 13.5-31.75 20.75-50.75 20.75-19.25 0-37.5-7.5-51-21.25l-51.5-51.75c-13.5-13.5-20.75-31.75-20.75-50.75 0-19.75 8-38.5 22-52.25l-22-22c-13.75 14-32.25 22-52 22-19 0-37.5-7.5-51-21l-52-52c-13.75-13.75-21-31.75-21-51 0-19 7.75-37.5 21.25-50.75l36.75-36.5c13.5-13.5 31.75-20.75 50.75-20.75 19.25 0 37.5 7.5 51 21.25l51.5 51.75c13.5 13.5 20.75 31.75 20.75 50.75 0 19.75-8 38.5-22 52.25l22 22c13.75-14 32.25-22 52-22 19 0 37.5 7.5 51 21l52 52c13.75 13.75 21 31.75 21 51z"></path></svg></span><span class="pojo-a11y-toolbar-text">Links Underline</span>                               </a>
+                           </li>
+                       
+                                                   <li class="pojo-a11y-toolbar-item">
+                               <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-readable-font" data-action="readable-font" data-action-group="toggle" tabindex="-1" role="button">
+                                   <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Readable Font</title><path fill="currentColor" d="M181.25 139.75l-42.5 112.5c24.75 0.25 49.5 1 74.25 1 4.75 0 9.5-0.25 14.25-0.5-13-38-28.25-76.75-46-113zM0 416l0.5-19.75c23.5-7.25 49-2.25 59.5-29.25l59.25-154 70-181h32c1 1.75 2 3.5 2.75 5.25l51.25 120c18.75 44.25 36 89 55 133 11.25 26 20 52.75 32.5 78.25 1.75 4 5.25 11.5 8.75 14.25 8.25 6.5 31.25 8 43 12.5 0.75 4.75 1.5 9.5 1.5 14.25 0 2.25-0.25 4.25-0.25 6.5-31.75 0-63.5-4-95.25-4-32.75 0-65.5 2.75-98.25 3.75 0-6.5 0.25-13 1-19.5l32.75-7c6.75-1.5 20-3.25 20-12.5 0-9-32.25-83.25-36.25-93.5l-112.5-0.5c-6.5 14.5-31.75 80-31.75 89.5 0 19.25 36.75 20 51 22 0.25 4.75 0.25 9.5 0.25 14.5 0 2.25-0.25 4.5-0.5 6.75-29 0-58.25-5-87.25-5-3.5 0-8.5 1.5-12 2-15.75 2.75-31.25 3.5-47 3.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Readable Font</span>                                </a>
+                           </li>
+                                                                       <li class="pojo-a11y-toolbar-item">
+                           <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-reset" data-action="reset" tabindex="-1" role="button">
+                               <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Reset</title><path fill="currentColor" d="M384 224c0 105.75-86.25 192-192 192-57.25 0-111.25-25.25-147.75-69.25-2.5-3.25-2.25-8 0.5-10.75l34.25-34.5c1.75-1.5 4-2.25 6.25-2.25 2.25 0.25 4.5 1.25 5.75 3 24.5 31.75 61.25 49.75 101 49.75 70.5 0 128-57.5 128-128s-57.5-128-128-128c-32.75 0-63.75 12.5-87 34.25l34.25 34.5c4.75 4.5 6 11.5 3.5 17.25-2.5 6-8.25 10-14.75 10h-112c-8.75 0-16-7.25-16-16v-112c0-6.5 4-12.25 10-14.75 5.75-2.5 12.75-1.25 17.25 3.5l32.5 32.25c35.25-33.25 83-53 132.25-53 105.75 0 192 86.25 192 192z"></path></svg></span>
+                               <span class="pojo-a11y-toolbar-text">Reset</span>
+                           </a>
+                       </li>
+                   </ul>
+                                   </div>
+           </div>
+       </nav>
+   <div id="page-container" class="et-animated-content" style="padding-top: 75px; margin-top: -27px;">
+<div id="et-boc" class="et-boc">
+   <header id="main-header" data-height-onload="80" data-height-loaded="true" data-fixed-height-onload="0" class="et-fixed-header" style="top: 0px;">
+       <div class="container clearfix et_menu_container">
+                   <div class="logo_container">
+               <span class="logo_helper"></span>
+               <a href="https://www.sussexprinting.com/">
+               <img src="https://www.heartoflongmont.org/wp-content/uploads/2019/02/Movie-Recommendation.jpg" width="1000" height="229" alt="Sussex Printing Corporation" id="logo" data-height-percentage="91" data-actual-width="1000" data-actual-height="229">
+               </a>
+           </div>
+                   <div id="et-top-navigation" data-height="66" data-fixed-height="40" style="padding-left: 347px;">
+                                   <nav id="top-menu-nav">
+                   <ul id="top-menu" class="nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-15 current_page_item menu-item-29"><a href="file:///C:/Users/SHONIMA%20S/Documents/filim.html" aria-current="page">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-30"><a href="" aria-current="page">Gallery</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-31"><a href="file:///C:/Users/SHONIMA%20S/Documents/filim.html" aria-current="page">Features</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-32"><a href="" aria-current="page">Recommendation</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-34"><a href="" aria-current="page">Filter</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-34"><a href="file:///C:/Users/SHONIMA%20S/Documents/filim.html" aria-current="page">Contact Us</a></li>
+
+</ul>                   </nav>
+               
+               
+               
+               
+               <div id="et_mobile_nav_menu">
+               <div class="mobile_nav closed">
+                   <span class="select_page">Select Page</span>
+                   <span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+               <ul id="mobile_menu" class="et_mobile_menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-15 current_page_item menu-item-29 et_first_mobile_item"><a href="file:///C:/Users/SHONIMA%20S/Documents/filim.html" aria-current="page">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-30"><a href="" aria-current="page">Gallery</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-31"><a href="file:///C:/Users/SHONIMA%20S/Documents/filim.html" aria-current="page">Features</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-32"><a href="" aria-current="page">Recommendation</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-34"><a href="" aria-current="page">Filter</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-34"><a href="file:///C:/Users/SHONIMA%20S/Documents/filim.html" aria-current="page">Contact Us</a></li>
+
+</ul></div>
+           </div>          </div> <!-- #et-top-navigation -->
+       </div> <!-- .container -->
+           </header> <!-- #main-header -->
+<div id="et-main-area">
+   
+<div id="main-content">
+
+
+           
+               <article id="post-15" class="post-15 page type-page status-publish hentry">
+
+               
+                   <div class="entry-content">
+                   <div class="et-l et-l--post">
+           <div class="et_builder_inner_content et_pb_gutters3">
+       <div class="et_pb_section et_pb_section_0 et_pb_section_parallax et_pb_with_background et_section_regular">
+               
+               <span class="et_parallax_bg_wrap"><span class="et_parallax_bg et_parallax_bg_phone" style="background-image: url(&quot;https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&quot;); height: 689.325px; transform: translate(0px, 1653.3px);"></span><span class="et_parallax_bg et_parallax_bg_phone" style="background-color:#000000"></span><span class="et_parallax_gradient et_parallax_gradient_phone" style="background-image: linear-gradient( 180deg, rgba(255,255,255,0.84) 0%, rgba(255,255,255,0.57) 98% );"></span></span><span class="et_parallax_bg_wrap"><span class="et_parallax_bg_phone_exist et_parallax_bg et_parallax_bg_tablet" style="background-image: url(&quot;https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&quot;); height: 689.325px; transform: translate(0px, 1653.3px);"></span><span class="et_parallax_bg et_parallax_bg_phone" style="background-color:#000000"></span><span class="et_parallax_gradient_phone_exist et_parallax_gradient et_parallax_gradient_tablet" style="background-image: linear-gradient( 180deg, rgba(255,255,255,0.38) 0%, rgba(255,255,255,0.56) 100% );"></span></span><span class="et_parallax_bg_wrap"><span class="et_parallax_bg_phone_exist et_parallax_bg_tablet_exist et_parallax_bg" style="background-image: url(&quot;https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww&quot;); height: 689.325px; transform: translate(0px, 1653.3px);"></span>
+               <span class="et_parallax_bg et_parallax_bg_phone" style="background-color:#000000"></span><span class="et_parallax_gradient_phone_exist et_parallax_gradient_tablet_exist et_parallax_gradient" style="background-image: linear-gradient( 180deg, rgba(43,135,218,0) 0%, rgba(41,196,169,0) 100% );"></span></span>
+               
+               
+               <span class="et_pb_background_mask"></span>
+               
+               <div id="about" class="et_pb_row et_pb_row_0">
+               <div class="et_pb_column et_pb_column_3_5 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
+               
+               
+               
+               
+               <div class="et_pb_module et_pb_cta_0 et_pb_promo  et_pb_text_align_left et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_promo_description">
+</div>
+               <div class="et_pb_button_wrapper">
+                   <a class="et_pb_button et_pb_promo_button" href="#products">PLEASE CLICK</a></div>
+           </div>
+           </div><div class="et_pb_column et_pb_column_2_5 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
+               
+               
+               
+               
+               
+           </div>
+               
+               
+               
+               
+           </div>
+               
+               
+           </div><div class="et_pb_section et_pb_section_1 et_pb_with_background et_section_regular">
+               
+               
+               
+               
+               
+               
+               <div class="et_pb_with_border et_pb_row et_pb_row_1">
+               <div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+               
+               
+               
+               
+               <div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_text_inner">
+<p>" Welcome to our movie recommendation platform! Choose from a wide range of English and Malayalam movies tailored to your preferences..."</p></div>
+           </div>
+           </div>
+               
+               
+               
+               
+           </div><div id="services" class="et_pb_row et_pb_row_2">
+               <div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+               
+               
+               
+               
+               <div class="et_pb_with_border et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_text_inner"><h2>Features</h2></div>
+           </div>
+           </div>
+               
+               
+               
+               
+           </div><div class="et_pb_row et_pb_row_3 et_pb_equal_columns et_pb_row_4col">
+               <div class="et_pb_with_border et_pb_column_1_4 et_pb_column et_pb_column_4  et_pb_css_mix_blend_mode_passthrough">
+               
+               
+               
+               
+               <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_0  et_pb_text_align_center  et_pb_blurb_position_top et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_blurb_content">
+                   <div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="170" height="170" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww" alt="" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-113 et-animated"></span></div>
+                   <div class="et_pb_blurb_container">
+                       <h4 class="et_pb_module_header"><span>Language Selection</span></h4>
+                       <div class="et_pb_blurb_description"><div id="WRchTxt8-bjr" class="_1Q9if" data-testid="richTextElement" data-angle="0" data-angle-style-location="style" data-screen-in-hide="done">
+<p class="font_8">Select your preferred language to get started:
+
+English<br>
+Malayalam</p>
+</div>
+<div id="comp-jubfs40w" class="XUUsC" title="" data-angle="0" data-angle-style-location="style" data-screen-in-hide="done">
+<div data-testid="linkElement" class="xQ_iF"></div>
+</div></div>
+                   </div>
+               </div>
+           </div>
+           </div><div class="et_pb_with_border et_pb_column_1_4 et_pb_column et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
+               
+               
+               
+               
+               <div class="et_pb_module et_pb_blurb et_pb_blurb_1  et_pb_text_align_center  et_pb_blurb_position_top et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_blurb_content">
+                   <div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="170" height="170" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww" alt="" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-116 et-animated"></span></div>
+                   <div class="et_pb_blurb_container">
+                       <h4 class="et_pb_module_header"><span>Recommendation Options</span></h4>
+                       <div class="et_pb_blurb_description"><p>
+You have two ways to get movie recommendations:<br>
+
+
+1.Personalized Recommendations<br>
+
+Get movie recommendations based on your preferences. Just sit back and let us suggest the best movies for you!<br>
+
+2.Filter Movies<br>
+
+Prefer to explore movies on your own terms? Use our advanced filtering options to find exactly what you're looking for. Choose from the following filters:<br>
+
+Actors: Find movies featuring your favorite actors.<br>
+Directors: Discover films directed by your favorite directors.<br>
+Year of Release: Whether you love classics or the latest releases, filter movies by their release year.<br>
+Classics: Explore timeless movies from the past.<br>
+New Releases: Catch up on the latest hits.</p></div>
+                   </div>
+               </div>
+           </div>
+           </div><div class="et_pb_with_border et_pb_column_1_4 et_pb_column et_pb_column_6  et_pb_css_mix_blend_mode_passthrough">
+               
+               
+               
+               
+               <div class="et_pb_module et_pb_blurb et_pb_blurb_2  et_pb_text_align_center  et_pb_blurb_position_top et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_blurb_content">
+                   <div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="168" height="170" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww" alt="" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-114 et-animated"></span></div>
+                   <div class="et_pb_blurb_container">
+                       <h4 class="et_pb_module_header"><span>How It Works</span></h4>
+                       <div class="et_pb_blurb_description"><p>Select Language: Start by choosing either English or Malayalam.<br>
+Choose Your Preference: For Malayalam movies, decide whether you want personalized recommendations or to use our filtering options.<br>
+Explore and Enjoy: Dive into the world of movies tailored just for you!</p></div>
+                   </div>
+               </div>
+           </div>
+           </div><div class="et_pb_with_border et_pb_column_1_4 et_pb_column et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+               
+               
+               
+               
+               <div class="et_pb_module et_pb_blurb et_pb_blurb_3  et_pb_text_align_center  et_pb_blurb_position_top et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_blurb_content">
+                   <div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="170" height="170" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjBwb3N0ZXJzfGVufDB8fDB8fHww" alt="" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-115 et-animated"></span></div>
+                   <div class="et_pb_blurb_container">
+                       <h4 class="et_pb_module_header"><span>Need Help?</span></h4>
+                       <div class="et_pb_blurb_description"><p>If you need assistance or have any questions, feel free to reach out to our support team.
+
+Enjoy your movie journey with us!</p></div>
+                   </div>
+               </div>
+           </div>
+           </div>
+               
+               
+               
+               
+           </div>
+               
+               
+           </div><div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
+               
+               
+               
+               
+               
+               
+               <div class="et_pb_row et_pb_row_4 et_pb_equal_columns">
+               <div class="et_pb_column et_pb_column_2_3 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough">
+               
+               
+               
+               
+               <div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_text_inner"><h3> For any doubt please contact</h3></div>
+           </div>
+           </div><div class="et_pb_column et_pb_column_1_3 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
+               
+               
+               
+               
+               <div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
+               <a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="#contact">Contact Us</a>
+           </div>
+           </div>
+               
+               
+               
+               
+           </div>
+               
+               
+           </div><div id="products" class="et_pb_section et_pb_section_3 et_section_regular">
+               
+               
+               
+               
+               
+               
+               <div class="et_pb_row et_pb_row_5">
+               <div class="et_pb_column et_pb_column_4_4 et_pb_column_10  et_pb_css_mix_blend_mode_passthrough et-last-child">
+               
+               
+               
+               
+               <div class="et_pb_with_border et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_text_inner"><h2>Recommentation System Offered</h2></div>
+           </div>
+           </div>
+               
+               
+               
+               
+           </div><div class="et_pb_row et_pb_row_7">
+                   <div class="et_pb_column et_pb_column_1_3 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough">
+                       <div class="et_pb_module dsm_flipbox dsm_flipbox_0">
+                           <div class="et_pb_module_inner">
+                           <div class="dsm-flipbox dsm-flipbox-effect-right dsm_flipbox_hover">
+                               <div class="et_pb_module dsm_flipbox_child dsm_flipbox_child_0 et_pb_bg_layout_light  dsm_flipbox_icon_position_top">
+               
+               
+               
+               
+               
+               
+               <div class="et_pb_module_inner">
+                   
+           
+           <div class="dsm_flipbox_wrapper et_pb_text_align_left">
+               
+               
+               
+               
+           </div>
+               </div>
+           </div><div class="et_pb_module dsm_flipbox_child dsm_flipbox_child_1 et_pb_bg_layout_dark  dsm_flipbox_icon_position_top">
+               <div class="et_pb_main_blurb_image">
+                                         <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
+                                            <img decoding="async" width="170" height="170" src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-116 et-animated">
+                                         </span>
+                                      </div>
+               
+               
+               
+               
+               
+               <div class="et_pb_module_inner">
+                   
+           
+           <div class="dsm_flipbox_wrapper et_pb_text_align_center">
+               <h4 class="dsm-title et_pb_module_header">Recomment movies</h4>
+               
+               <div class="dsm-content"><p>Recomment movies based on your suggestions.</p>
+      <div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module ">
+               <a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="http://127.0.0.1:5000/loadlang">Click</a>
+           </div></div>
+               
+           </div>
+               </div>
+           </div></div>
+               </div>
+           </div><div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_text_inner"><h3>RECOMMENTATION</h3></div>
+           </div>
+           </div><div class="et_pb_column et_pb_column_1_3 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough">
+               
+               
+               
+               
+               <div class="et_pb_module dsm_flipbox dsm_flipbox_1">
+               
+               
+               
+               
+               
+               
+               <div class="et_pb_module_inner">
+                   <div class="dsm-flipbox dsm-flipbox-effect-right dsm_flipbox_hover"><div class="et_pb_module dsm_flipbox_child dsm_flipbox_child_2 et_pb_bg_layout_light  dsm_flipbox_icon_position_top">
+               
+               
+               
+               
+               
+               
+               <div class="et_pb_module_inner">
+                   
+           
+           <div class="dsm_flipbox_wrapper et_pb_text_align_left">
+               
+               
+               
+               
+           </div>
+               </div>
+           </div><div class="et_pb_module dsm_flipbox_child dsm_flipbox_child_3 et_pb_bg_layout_dark  dsm_flipbox_icon_position_top">
+               
+               <div class="et_pb_main_blurb_image">
+                                         <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
+                                            <img decoding="async" width="170" height="170" src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-116 et-animated">
+                                         </span>
+                                      </div>
+               
+               
+               
+               
+               
+               
+               <div class="et_pb_module_inner">
+                   
+           
+           <div class="dsm_flipbox_wrapper et_pb_text_align_center">
+               <h4 class="dsm-title et_pb_module_header">Filtered</h4>
+               
+               <div class="dsm-content"><p>Filtering your suggestions.</p>
+<div class="et_pb_button_module_wrapper et_pb_button_2_wrapper et_pb_button_alignment_center et_pb_module ">
+               <a class="et_pb_button et_pb_button_2 et_pb_bg_layout_light" href="http://127.0.0.1:5000/filter">Click</a>
+           </div></div>
+               
+           </div>
+               </div>
+           </div></div>
+               </div>
+           </div><div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_text_inner"><h3>FILTERING</h3>
+                   </div>
+                                       </div>
+                                   </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </article>
+</div>
+
+               
+
+   <footer class="et-l et-l--footer">
+           <div class="et_builder_inner_content et_pb_gutters3"><div id="contact" class="et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular">
+               
+               
+               
+               
+               
+               
+               <div class="et_pb_row et_pb_row_0_tb_footer">
+               <div class="et_pb_column et_pb_column_2_5 et_pb_column_0_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+               
+               
+               
+               
+               <div class="et_pb_module et_pb_image et_pb_image_0_tb_footer">
+               
+               
+               
+               
+               <span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="1000" height="263" src="https://www.heartoflongmont.org/wp-content/uploads/2019/02/Movie-Recommendation.jpg" alt="" title="SussexPrinting2022_White_D2" class="wp-image-191"></span>
+           </div><div class="et_pb_module et_pb_blurb et_pb_blurb_0_tb_footer  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_dark">
+               
+               
+               
+               
+               <div class="et_pb_blurb_content">
+                   <div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon et-animated"></span></span></div>
+                   <div class="et_pb_blurb_container">
+                       
+                       <div class="et_pb_blurb_description"><p><a href="https://www.google.com/maps/place/24904+Sussex+Hwy,+Seaford,+DE+19973/data=!4m2!3m1!1s0x89b8f11ef8e55877:0x6275bb59cd8bd3ef?sa=X&amp;ved=2ahUKEwiA88-_0qr4AhWopIkEHQVJD_EQ8gF6BAggEAE" target="_blank" rel="noopener">College Of Engineering Kalloppara.<br> Pathanmthitta</a><br><a href="https://www.google.com/maps/place/24904+Sussex+Hwy,+Seaford,+DE+19973/data=!4m2!3m1!1s0x89b8f11ef8e55877:0x6275bb59cd8bd3ef?sa=X&amp;ved=2ahUKEwiA88-_0qr4AhWopIkEHQVJD_EQ8gF6BAggEAE" target="_blank" rel="noopener"></a></p></div>
+                   </div>
+               </div>
+           </div><div class="et_pb_module et_pb_blurb et_pb_blurb_1_tb_footer  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_dark">
+               
+               
+               
+               
+               <div class="et_pb_blurb_content">
+                   <div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon et-animated"></span></span></div>
+                   <div class="et_pb_blurb_container">
+                       
+                       <div class="et_pb_blurb_description"><p><a data-auto-recognition="true" href="mailto:quote@theguide.com">movierecommentation@.com</a></p></div>
+                   </div>
+               </div>
+           </div>
+           <div class="et_pb_module dsm_business_hours dsm_business_hours_1_tb_footer">
+              <div class="et_pb_module_inner">
+                   <div class="et_pb_module dsm_business_hours_child dsm_business_hours_child_0_tb_footer">
+                 <div class="et_pb_module_inner">
+                    <div class="dsm_business_hours_item_wrapper">
+                           <div class="dsm-business-hours-header">
+                               <div class="dsm-business-hours-day"></div>
+                               <div class="dsm-business-hours-separator"></div>
+                               <div class="dsm-business-hours-time"></div>
+                           </div>
+                       </div>
+                     </div>
+                 </div>
+              <div class="et_pb_module dsm_business_hours_child dsm_business_hours_child_1_tb_footer">
+                 <div class="et_pb_module_inner">
+                    <div class="dsm_business_hours_item_wrapper">
+                       <div class="dsm-business-hours-header">
+                               <div class="dsm-business-hours-day"></div>
+                               <div class="dsm-business-hours-separator"></div>
+                               <div class="dsm-business-hours-time"></div>
+                           </div>
+                       </div>
+                     </div>
+                 </div>
+               </div>
+           </div>
+       </div>
+           <div class="et_pb_column et_pb_column_3_5 et_pb_column_1_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+               
+               
+               
+               
+               <div class="et_pb_with_border et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_text_inner"><h3>Contact Us</h3></div>
+           </div><div class="et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+               
+               
+               
+               
+               <div class="et_pb_text_inner"><form id="forminator-module-78" class="forminator-ui forminator-custom-form forminator-custom-form-78 forminator-design--default  forminator_ajax" method="post" data-forminator-render="0" data-form-id="78" data-design="default" data-grid="open"  data-uid="664628870c4ac" novalidate="novalidate"><div role="alert" aria-live="polite" class="forminator-response-message forminator-error" aria-hidden="true"></div><div class="forminator-row"><div id="name-1" class="forminator-field-name forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-field-name-1_664628870c4ac" id="forminator-field-name-1_664628870c4ac-label" class="forminator-label">Full Name <span class="forminator-required">*</span></label><input type="text" name="name-1" value="" placeholder="" id="forminator-field-name-1_664628870c4ac" class="forminator-input forminator-name--field" aria-required="true" fdprocessedid="1oxq1"></div></div></div><div class="forminator-row"><div id="email-1" class="forminator-field-email forminator-col forminator-col-6 "><div class="forminator-field"><label for="forminator-field-email-1_664628870c4ac" id="forminator-field-email-1_664628870c4ac-label" class="forminator-label">Email Address <span class="forminator-required">*</span></label><input type="email" name="email-1" value="" placeholder="" id="forminator-field-email-1_664628870c4ac" class="forminator-input forminator-email--field" data-required="true" aria-required="true" fdprocessedid="ooz69c"></div></div><div id="phone-1" class="forminator-field-phone forminator-col forminator-col-6 "><div class="forminator-field"><label for="forminator-field-phone-1_664628870c4ac" id="forminator-field-phone-1_664628870c4ac-label" class="forminator-label">Phone Number <span class="forminator-required">*</span></label><input type="text" name="phone-1" value="" placeholder="" id="forminator-field-phone-1_664628870c4ac" class="forminator-input forminator-field--phone" data-required="1" aria-required="true" autocomplete="off" fdprocessedid="hnpd2s"></div></div></div><div class="forminator-row"><div id="text-1" class="forminator-field-text forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-field-text-1_664628870c4ac" id="forminator-field-text-1_664628870c4ac-label" class="forminator-label">Subject <span class="forminator-required">*</span></label><input type="text" name="text-1" value="" placeholder="" id="forminator-field-text-1_664628870c4ac" class="forminator-input forminator-name--field" data-required="1" fdprocessedid="c2a48r"></div></div></div><div class="forminator-row"><div id="textarea-1" class="forminator-field-textarea forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-field-textarea-1_664628870c4ac" id="forminator-field-textarea-1_664628870c4ac-label" class="forminator-label">Message <span class="forminator-required">*</span></label><textarea name="textarea-1" placeholder="" id="forminator-field-textarea-1_664628870c4ac" class="forminator-textarea" rows="6" style="min-height:140px;" maxlength="180"></textarea><span id="forminator-field-textarea-1_664628870c4ac-description" class="forminator-description"><span data-limit="180" data-type="characters">0 / 180</span></span></div></div></div><div class="forminator-row"><div id="captcha-1" class="forminator-field-captcha forminator-col forminator-col-12 "><div class="forminator-hcaptcha" data-theme="light" data-sitekey="502741fa-fce8-4cbb-bd5b-b2ad195745bb" data-size="normal"><iframe src="https://newassets.hcaptcha.com/captcha/v1/7329d5a/static/hcaptcha.html#frame=checkbox&amp;id=0vv47vx7iwn&amp;host=www.sussexprinting.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=off&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=502741fa-fce8-4cbb-bd5b-b2ad195745bb&amp;theme=light&amp;size=normal&amp;origin=https%3A%2F%2Fwww.sussexprinting.com" tabindex="0" frameborder="0" scrolling="no" allow="private-state-token-issuance 'src'; private-state-token-redemption 'src'" title="Widget containing checkbox for hCaptcha security challenge" data-hcaptcha-widget-id="0vv47vx7iwn" data-hcaptcha-response="" style="pointer-events: auto; width: 303px; height: 78px; overflow: hidden;"></iframe><textarea id="h-captcha-response-0vv47vx7iwn" name="h-captcha-response" style="display: none;"></textarea></div> </div></div><input type="hidden" name="referer_url" value=""><div class="forminator-row forminator-row-last"><div class="forminator-col"><div class="forminator-field"><button class="forminator-button forminator-button-submit" fdprocessedid="j5oe1">Send Message</button></div></div></div><input type="hidden" id="forminator_nonce" name="forminator_nonce" value="bf7390f1b7"><input type="hidden" name="_wp_http_referer" value="/"><input type="hidden" name="form_id" value="78"><input type="hidden" name="page_id" value="15"><input type="hidden" name="form_type" value="default"><input type="hidden" name="current_url" value="https://www.sussexprinting.com/"><input type="hidden" name="render_id" value="0"><input type="hidden" name="action" value="forminator_submit_form_custom-forms"></form></div>
+           </div>
+           </div>
+               
+               
+               
+               
+           </div>
+               
+               
+           </div>      </div>
+   </footer>
+       </div>
+
+           
+       </div>
+       </div>
+
+           <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-176572014-26"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+
+ gtag('config', 'UA-176572014-26');
+</script>
+<link rel="stylesheet" id="forminator-module-css-78-css" href="https://www.sussexprinting.com/wp-content/uploads/forminator/78_eec1a7fd329726d5bb21b61615d5d234/css/style-78.css?ver=1658930653" type="text/css" media="all">
+<link rel="stylesheet" id="forminator-icons-css" href="https://www.sussexprinting.com/wp-content/plugins/forminator/assets/forminator-ui/css/forminator-icons.min.css?ver=1.29.2" type="text/css" media="all">
+<link rel="stylesheet" id="forminator-utilities-css" href="https://www.sussexprinting.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/forminator-utilities.min.css?ver=1.29.2" type="text/css" media="all">
+<link rel="stylesheet" id="forminator-grid-default-css" href="https://www.sussexprinting.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/grid/forminator-grid.open.min.css?ver=1.29.2" type="text/css" media="all">
+<link rel="stylesheet" id="forminator-forms-default-base-css" href="https://www.sussexprinting.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-default.base.min.css?ver=1.29.2" type="text/css" media="all">
+<link rel="stylesheet" id="intlTelInput-forminator-css-css" href="https://www.sussexprinting.com/wp-content/plugins/forminator/assets/css/intlTelInput.min.css?ver=4.0.3" type="text/css" media="all">
+<link rel="stylesheet" id="buttons-css" href="https://www.sussexprinting.com/wp-includes/css/buttons.min.css?ver=6.5.3" type="text/css" media="all">
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/www.sussexprinting.com\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/www.sussexprinting.com\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/www.sussexprinting.com\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"cb5b3f77e4","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"685ee4c4c9","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"15","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":"https:\/\/www.sussexprinting.com\/wp-content\/themes\/Divi\/includes\/builder\/frontend-builder\/assets\/vendors","accent_color":"#2ea3f2","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/themes/Divi/js/scripts.min.js?ver=4.24.2" id="divi-custom-script-js"></script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/themes/Divi-Child/js/scripts.js?ver=0.1.1" id="divi-js"></script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/themes/Divi/js/smoothscroll.js?ver=4.24.2" id="smoothscroll-js"></script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/plugins/supreme-modules-for-divi/scripts/frontend-bundle.min.js?ver=2.5.3" id="supreme-modules-for-divi-frontend-bundle-js"></script>
+<script type="text/javascript" id="pojo-a11y-js-extra">
+/* <![CDATA[ */
+var PojoA11yOptions = {"focusable":"","remove_link_target":"","add_role_links":"","enable_save":"","save_expiration":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/plugins/pojo-accessibility/assets/js/app.min.js?ver=1.0.0" id="pojo-a11y-js"></script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/themes/Divi/core/admin/js/common.js?ver=4.24.2" id="et-core-common-js"></script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/plugins/forminator/assets/js/library/jquery.validate.min.js?ver=1.29.2" id="forminator-jquery-validate-js"></script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/plugins/forminator/assets/forminator-ui/js/forminator-form.min.js?ver=1.29.2" id="forminator-form-js"></script>
+<script type="text/javascript" id="forminator-front-scripts-js-extra">
+/* <![CDATA[ */
+var ForminatorFront = {"ajaxUrl":"https:\/\/www.sussexprinting.com\/wp-admin\/admin-ajax.php","cform":{"processing":"Submitting form, please wait","error":"An error occurred while processing the form. Please try again","upload_error":"An upload error occurred while processing the form. Please try again","pagination_prev":"Previous","pagination_next":"Next","pagination_go":"Submit","gateway":{"processing":"Processing payment, please wait","paid":"Success! Payment confirmed. Submitting form, please wait","error":"Error! Something went wrong when verifying the payment"},"captcha_error":"Invalid CAPTCHA","no_file_chosen":"No file chosen","intlTelInput_utils_script":"https:\/\/www.sussexprinting.com\/wp-content\/plugins\/forminator\/assets\/js\/library\/intlTelInputUtils.js","process_error":"Please try again"},"poll":{"processing":"Submitting vote, please wait","error":"An error occurred saving the vote. Please try again"},"quiz":{"view_results":"View Results"},"select2":{"load_more":"Loading more results\u2026","no_result_found":"No results found","searching":"Searching\u2026","loaded_error":"The results could not be loaded."}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/plugins/forminator/build/front/front.multi.min.js?ver=1.29.2" id="forminator-front-scripts-js"></script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/plugins/forminator/assets/js/library/intlTelInput.min.js?ver=1.29.2" id="forminator-intlTelInput-js"></script>
+<script type="text/javascript" src="https://www.sussexprinting.com/wp-content/plugins/forminator/assets/js/library/libphonenumber.min.js?ver=1.29.2" id="forminator-libphonenumber-js"></script>
+<script type="text/javascript" src="https://js.hcaptcha.com/1/api.js?hl=en_US&amp;onload=forminator_render_hcaptcha&amp;render=explicit&amp;recaptchacompat=off&amp;ver=1.29.2" id="forminator-hcaptcha-js"></script>
+<style id="et-builder-module-design-tb-79-deferred-15-cached-inline-styles">.et_pb_section_0_tb_footer.et_pb_section{background-color:#1B1B19!important}.et_pb_image_0_tb_footer{padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;width:80%;text-align:left;margin-left:0}.et_pb_blurb_1_tb_footer.et_pb_blurb,.et_pb_blurb_4_tb_footer.et_pb_blurb,.et_pb_blurb_2_tb_footer.et_pb_blurb,.et_pb_blurb_3_tb_footer.et_pb_blurb,.et_pb_blurb_0_tb_footer.et_pb_blurb{font-weight:700;font-size:18px}.et_pb_blurb_1_tb_footer.et_pb_blurb .et_pb_blurb_description a,.et_pb_blurb_0_tb_footer.et_pb_blurb .et_pb_blurb_description a,.et_pb_blurb_2_tb_footer.et_pb_blurb .et_pb_blurb_description a{color:#FFFFFF!important;transition:color 300ms ease 0ms}.et_pb_blurb_0_tb_footer.et_pb_blurb .et_pb_blurb_description a:hover,.et_pb_blurb_1_tb_footer.et_pb_blurb .et_pb_blurb_description a:hover,.et_pb_blurb_2_tb_footer.et_pb_blurb .et_pb_blurb_description a:hover{color:#179DD8!important}.et_pb_blurb_0_tb_footer .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_0_tb_footer .et_pb_main_blurb_image .et-pb-icon,.et_pb_blurb_3_tb_footer .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_3_tb_footer .et_pb_main_blurb_image .et-pb-icon,.et_pb_blurb_1_tb_footer .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_1_tb_footer .et_pb_main_blurb_image .et-pb-icon,.et_pb_blurb_2_tb_footer .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_2_tb_footer .et_pb_main_blurb_image .et-pb-icon,.et_pb_blurb_4_tb_footer .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_4_tb_footer .et_pb_main_blurb_image .et-pb-icon{border-radius:30px 30px 30px 30px;overflow:hidden;padding-top:10px!important;padding-right:10px!important;padding-bottom:10px!important;padding-left:10px!important;background-color:#FFFFFF}.et_pb_blurb_4_tb_footer .et-pb-icon,.et_pb_blurb_0_tb_footer .et-pb-icon{font-size:10px;color:#1B1B19;font-family:ETmodules!important;font-weight:400!important}.et_pb_blurb_3_tb_footer .et-pb-icon,.et_pb_blurb_1_tb_footer .et-pb-icon,.et_pb_blurb_2_tb_footer .et-pb-icon{font-size:10px;color:#1B1B19;font-family:FontAwesome!important;font-weight:900!important}.et_pb_blurb_3_tb_footer.et_pb_blurb .et_pb_blurb_description a,.et_pb_blurb_4_tb_footer.et_pb_blurb .et_pb_blurb_description a,.et_pb_text_0_tb_footer h1,.et_pb_text_0_tb_footer h3{color:#FFFFFF!important}.dsm_business_hours_0_tb_footer .dsm-business-hours-separator{border-bottom-color:#333}.dsm_business_hours_0_tb_footer .dsm_business_hours_child:not(:last-child),.dsm_business_hours_1_tb_footer .dsm_business_hours_child:not(:last-child){border-bottom-color:rgba(0,0,0,0.12)}.dsm_business_hours_1_tb_footer .dsm-business-hours-day,.dsm_business_hours_1_tb_footer .dsm-business-hours-time{font-weight:700;color:#FFFFFF!important}.dsm_business_hours_1_tb_footer .dsm_business_hours_item_wrapper{padding-top:0px;padding-bottom:0px}.dsm_business_hours_1_tb_footer .dsm-business-hours-separator{border-bottom-color:#333;margin-left:0px;margin-right:0px}.et_pb_text_0_tb_footer{border-left-width:2px;border-left-color:#179DD8;padding-left:10px!important}.et_pb_image_0_tb_footer.et_pb_module{margin-left:0px!important;margin-right:auto!important}@media only screen and (max-width:980px){.et_pb_image_0_tb_footer .et_pb_image_wrap img{width:auto}.et_pb_text_0_tb_footer{border-left-width:2px;border-left-color:#179DD8}}@media only screen and (max-width:767px){.et_pb_image_0_tb_footer .et_pb_image_wrap img{width:auto}.et_pb_text_0_tb_footer{border-left-width:2px;border-left-color:#179DD8}}div.et_pb_section.et_pb_section_0{background-image:linear-gradient(180deg,rgba(43,135,218,0) 0%,rgba(41,196,169,0) 100%)!important}div.et_pb_section.et_pb_section_0>.et_pb_background_mask{transform:scale(1,-1);background-image:url(data:image/svg+xml;base64,PHN2ZyAgZmlsbD0iI2ZmZmZmZiIgdmlld0JveD0iMCAwIDE5MjAgMTQ0MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cG9seWdvbiBwb2ludHM9IjAgMCAwIDE0NDAgMTQzMS4xOCAxNDQwIDk1NS43OSAwIDAgMCIvPgoJCQkJCQkJCQk8cG9seWdvbiBwb2ludHM9IjEyOTEuOTIgMCAxNzY3LjMyIDE0NDAgMTgxNi4xMyAxNDQwIDEzNDAuNzMgMCAxMjkxLjkyIDAiLz4KCQkJCQkJCQkJPHBvbHlnb24gcG9pbnRzPSIxNzI1LjY4IDAgMTY3Ni44NyAwIDE5MjAgNzM2LjQ1IDE5MjAgNTg4LjYxIDE3MjUuNjggMCIvPjwvc3ZnPg==)}.et_pb_cta_0.et_pb_promo h2,.et_pb_cta_0.et_pb_promo h1.et_pb_module_header,.et_pb_cta_0.et_pb_promo h3.et_pb_module_header,.et_pb_cta_0.et_pb_promo h4.et_pb_module_header,.et_pb_cta_0.et_pb_promo h5.et_pb_module_header,.et_pb_cta_0.et_pb_promo h6.et_pb_module_header{font-size:3em!important}.et_pb_cta_0.et_pb_promo .et_pb_promo_description div{font-weight:600;color:#1B1B19!important}.et_pb_cta_0.et_pb_promo{padding-top:0px!important;padding-bottom:0px!important;padding-left:0px!important}body #page-container .et_pb_section .et_pb_cta_0.et_pb_promo .et_pb_promo_button.et_pb_button{color:#FFFFFF!important;border-width:0px!important;border-radius:30px;font-weight:800!important;text-transform:uppercase!important;background-image:radial-gradient(ellipse at bottom,#18d0f4 0%,#179dd8 67%)}.et_pb_section_1.et_pb_section{background-color:#f9f9f9!important}.et_pb_row_1{background-color:#FFFFFF;border-width:1px;border-color:#EAEAEA;box-shadow:7px 7px 0px 0px #1B1B19}.et_pb_row_1.et_pb_row{padding-top:30px!important;padding-right:30px!important;padding-bottom:30px!important;padding-left:30px!important;padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px}.et_pb_row_2.et_pb_row{margin-top:40px!important}.et_pb_text_1{border-left-width:3px;border-left-color:#179DD8;padding-left:20px!important}.et_pb_blurb_0 .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_0 .et_pb_main_blurb_image .et-pb-icon{border-radius:300px 300px 300px 300px;overflow:hidden;border-color:#179DD8}.et_pb_blurb_3 .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_3 .et_pb_main_blurb_image .et-pb-icon,.et_pb_blurb_1 .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_1 .et_pb_main_blurb_image .et-pb-icon,.et_pb_blurb_2 .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_2 .et_pb_main_blurb_image .et-pb-icon{border-radius:300px 300px 300px 300px;overflow:hidden}.et_pb_section_2.et_pb_section{padding-top:0px;padding-bottom:0px;background-color:#179DD8!important}.et_pb_row_4.et_pb_row{padding-top:20px!important;padding-bottom:20px!important;padding-top:20px;padding-bottom:20px}.et_pb_column_8{margin:auto}.et_pb_text_2 h3{color:#FFFFFF!important}body #page-container .et_pb_section .et_pb_button_0{color:#1B1B19!important;border-width:0px!important;border-radius:30px;font-weight:800!important;background-color:#FFFFFF}.et_pb_button_5,.et_pb_section_12,.et_pb_button_4,.et_pb_section_15,.et_pb_button_24,.et_pb_button_11,.et_pb_section_14,.et_pb_section_13,.et_pb_section_28,.et_pb_button_9,.et_pb_section_11,.et_pb_button_8,.et_pb_section_8,.et_pb_button_25,.et_pb_button_7,.et_pb_section_10,.et_pb_button_6,.et_pb_section_9,.et_pb_section_29,.et_pb_section_27,.et_pb_button_26,.et_pb_button_12,.et_pb_button_16,.et_pb_section_16,.et_pb_section_21,.et_pb_button_21,.et_pb_section_24,.et_pb_button_20,.et_pb_section_23,.et_pb_section_25,.et_pb_button_19,.et_pb_section_22,.et_pb_button_22,.et_pb_button_18,.et_pb_button_17,.et_pb_button_13,.et_pb_section_20,.et_pb_section_26,.et_pb_button_3,.et_pb_section_19,.et_pb_button_23,.et_pb_button_15,.et_pb_section_18,.et_pb_button_14,.et_pb_section_17,.et_pb_section_7,.et_pb_button_10,.et_pb_section_5,.et_pb_section_30,.et_pb_section_4,.et_pb_button_1,.et_pb_button_0,.et_pb_button_2,.et_pb_button_27,.et_pb_section_6{width:100%}.et_pb_button_24,.et_pb_button_24:after,.et_pb_button_5,.et_pb_button_5:after,.et_pb_button_8,.et_pb_button_8:after,.et_pb_button_6,.et_pb_button_6:after,.et_pb_button_13,.et_pb_button_13:after,.et_pb_button_20,.et_pb_button_20:after,.et_pb_button_0,.et_pb_button_0:after,.et_pb_button_19,.et_pb_button_19:after,.et_pb_button_12,.et_pb_button_12:after,.et_pb_button_27,.et_pb_button_27:after,.et_pb_button_17,.et_pb_button_17:after,.et_pb_button_16,.et_pb_button_16:after,.et_pb_button_1,.et_pb_button_1:after,.et_pb_button_14,.et_pb_button_14:after,.et_pb_button_4,.et_pb_button_4:after,.et_pb_button_26,.et_pb_button_26:after,.et_pb_button_23,.et_pb_button_23:after,.et_pb_button_25,.et_pb_button_25:after,.et_pb_button_21,.et_pb_button_21:after,.et_pb_button_3,.et_pb_button_3:after,.et_pb_button_2,.et_pb_button_2:after,.et_pb_button_7,.et_pb_button_7:after,.et_pb_button_11,.et_pb_button_11:after,.et_pb_button_18,.et_pb_button_18:after,.et_pb_button_9,.et_pb_button_9:after,.et_pb_button_10,.et_pb_button_10:after,.et_pb_button_22,.et_pb_button_22:after,.et_pb_button_15,.et_pb_button_15:after{transition:all 300ms ease 0ms}.dsm_flipbox_5,.et_pb_section_3,.dsm_flipbox_16,.dsm_flipbox_10,.dsm_flipbox_18,.dsm_flipbox_24,.dsm_flipbox_21,.dsm_flipbox_11,.dsm_flipbox_0,.dsm_flipbox_9,.dsm_flipbox_15,.dsm_flipbox_12,.dsm_flipbox_20,.dsm_flipbox_26,.dsm_flipbox_25,.dsm_flipbox_8,.dsm_flipbox_14,.dsm_flipbox_2,.dsm_flipbox_13,.dsm_flipbox_22,.dsm_flipbox_3,.dsm_flipbox_17,.dsm_flipbox_6,.dsm_flipbox_19,.dsm_flipbox_7,.dsm_flipbox_1,.dsm_flipbox_23,.dsm_flipbox_4{min-height:250px}.et_pb_text_3{border-left-width:3px;border-left-color:#E12C93;padding-left:20px!important}.dsm_flipbox_child_34 h1.et_pb_module_header,.dsm_flipbox_child_34 h2.et_pb_module_header,.dsm_flipbox_child_34 h3.et_pb_module_header,.dsm_flipbox_child_34 h4.et_pb_module_header,.dsm_flipbox_child_34 h5.et_pb_module_header,.dsm_flipbox_child_34 h6.et_pb_module_header,.dsm_flipbox_child_19 .dsm-subtitle,.dsm_flipbox_child_2 .dsm-subtitle,.dsm_flipbox_child_43 .dsm-subtitle,.dsm_flipbox_child_0 h1.et_pb_module_header,.dsm_flipbox_child_0 h2.et_pb_module_header,.dsm_flipbox_child_0 h3.et_pb_module_header,.dsm_flipbox_child_0 h4.et_pb_module_header,.dsm_flipbox_child_0 h5.et_pb_module_header,.dsm_flipbox_child_0 h6.et_pb_module_header,.dsm_flipbox_child_47 .dsm-subtitle,.dsm_flipbox_child_19 h1.et_pb_module_header,.dsm_flipbox_child_19 h2.et_pb_module_header,.dsm_flipbox_child_19 h3.et_pb_module_header,.dsm_flipbox_child_19 h4.et_pb_module_header,.dsm_flipbox_child_19 h5.et_pb_module_header,.dsm_flipbox_child_19 h6.et_pb_module_header,.dsm_flipbox_child_34 .dsm-subtitle,.dsm_flipbox_child_47 h1.et_pb_module_header,.dsm_flipbox_child_47 h2.et_pb_module_header,.dsm_flipbox_child_47 h3.et_pb_module_header,.dsm_flipbox_child_47 h4.et_pb_module_header,.dsm_flipbox_child_47 h5.et_pb_module_header,.dsm_flipbox_child_47 h6.et_pb_module_header,.dsm_flipbox_child_20 .dsm-subtitle,.dsm_flipbox_child_20 h1.et_pb_module_header,.dsm_flipbox_child_20 h2.et_pb_module_header,.dsm_flipbox_child_20 h3.et_pb_module_header,.dsm_flipbox_child_20 h4.et_pb_module_header,.dsm_flipbox_child_20 h5.et_pb_module_header,.dsm_flipbox_child_20 h6.et_pb_module_header,.dsm_flipbox_child_41 h1.et_pb_module_header,.dsm_flipbox_child_41 h2.et_pb_module_header,.dsm_flipbox_child_41 h3.et_pb_module_header,.dsm_flipbox_child_41 h4.et_pb_module_header,.dsm_flipbox_child_41 h5.et_pb_module_header,.dsm_flipbox_child_41 h6.et_pb_module_header,.dsm_flipbox_child_41 .dsm-subtitle,.dsm_flipbox_child_2 h1.et_pb_module_header,.dsm_flipbox_child_2 h2.et_pb_module_header,.dsm_flipbox_child_2 h3.et_pb_module_header,.dsm_flipbox_child_2 h4.et_pb_module_header,.dsm_flipbox_child_2 h5.et_pb_module_header,.dsm_flipbox_child_2 h6.et_pb_module_header,.dsm_flipbox_child_27 h1.et_pb_module_header,.dsm_flipbox_child_27 h2.et_pb_module_header,.dsm_flipbox_child_27 h3.et_pb_module_header,.dsm_flipbox_child_27 h4.et_pb_module_header,.dsm_flipbox_child_27 h5.et_pb_module_header,.dsm_flipbox_child_27 h6.et_pb_module_header,.dsm_flipbox_child_25 h1.et_pb_module_header,.dsm_flipbox_child_25 h2.et_pb_module_header,.dsm_flipbox_child_25 h3.et_pb_module_header,.dsm_flipbox_child_25 h4.et_pb_module_header,.dsm_flipbox_child_25 h5.et_pb_module_header,.dsm_flipbox_child_25 h6.et_pb_module_header,.dsm_flipbox_child_25 .dsm-subtitle,.dsm_flipbox_child_46 h1.et_pb_module_header,.dsm_flipbox_child_46 h2.et_pb_module_header,.dsm_flipbox_child_46 h3.et_pb_module_header,.dsm_flipbox_child_46 h4.et_pb_module_header,.dsm_flipbox_child_46 h5.et_pb_module_header,.dsm_flipbox_child_46 h6.et_pb_module_header,.dsm_flipbox_child_26 h1.et_pb_module_header,.dsm_flipbox_child_26 h2.et_pb_module_header,.dsm_flipbox_child_26 h3.et_pb_module_header,.dsm_flipbox_child_26 h4.et_pb_module_header,.dsm_flipbox_child_26 h5.et_pb_module_header,.dsm_flipbox_child_26 h6.et_pb_module_header,.dsm_flipbox_child_26 .dsm-subtitle,.dsm_flipbox_child_45 .dsm-subtitle,.dsm_flipbox_child_27 .dsm-subtitle,.dsm_flipbox_child_31 h1.et_pb_module_header,.dsm_flipbox_child_31 h2.et_pb_module_header,.dsm_flipbox_child_31 h3.et_pb_module_header,.dsm_flipbox_child_31 h4.et_pb_module_header,.dsm_flipbox_child_31 h5.et_pb_module_header,.dsm_flipbox_child_31 h6.et_pb_module_header,.dsm_flipbox_child_45 h1.et_pb_module_header,.dsm_flipbox_child_45 h2.et_pb_module_header,.dsm_flipbox_child_45 h3.et_pb_module_header,.dsm_flipbox_child_45 h4.et_pb_module_header,.dsm_flipbox_child_45 h5.et_pb_module_header,.dsm_flipbox_child_45 h6.et_pb_module_header,.dsm_flipbox_child_28 h1.et_pb_module_header,.dsm_flipbox_child_28 h2.et_pb_module_header,.dsm_flipbox_child_28 h3.et_pb_module_header,.dsm_flipbox_child_28 h4.et_pb_module_header,.dsm_flipbox_child_28 h5.et_pb_module_header,.dsm_flipbox_child_28 h6.et_pb_module_header,.dsm_flipbox_child_28 .dsm-subtitle,.dsm_flipbox_child_30 .dsm-subtitle,.dsm_flipbox_child_30 h1.et_pb_module_header,.dsm_flipbox_child_30 h2.et_pb_module_header,.dsm_flipbox_child_30 h3.et_pb_module_header,.dsm_flipbox_child_30 h4.et_pb_module_header,.dsm_flipbox_child_30 h5.et_pb_module_header,.dsm_flipbox_child_30 h6.et_pb_module_header,.dsm_flipbox_child_29 .dsm-subtitle,.dsm_flipbox_child_46 .dsm-subtitle,.dsm_flipbox_child_1 h1.et_pb_module_header,.dsm_flipbox_child_1 h2.et_pb_module_header,.dsm_flipbox_child_1 h3.et_pb_module_header,.dsm_flipbox_child_1 h4.et_pb_module_header,.dsm_flipbox_child_1 h5.et_pb_module_header,.dsm_flipbox_child_1 h6.et_pb_module_header,.dsm_flipbox_child_21 h1.et_pb_module_header,.dsm_flipbox_child_21 h2.et_pb_module_header,.dsm_flipbox_child_21 h3.et_pb_module_header,.dsm_flipbox_child_21 h4.et_pb_module_header,.dsm_flipbox_child_21 h5.et_pb_module_header,.dsm_flipbox_child_21 h6.et_pb_module_header,.dsm_flipbox_child_0 .dsm-subtitle,.dsm_flipbox_child_21 .dsm-subtitle,.dsm_flipbox_child_33 .dsm-subtitle,.dsm_flipbox_child_33 h1.et_pb_module_header,.dsm_flipbox_child_33 h2.et_pb_module_header,.dsm_flipbox_child_33 h3.et_pb_module_header,.dsm_flipbox_child_33 h4.et_pb_module_header,.dsm_flipbox_child_33 h5.et_pb_module_header,.dsm_flipbox_child_33 h6.et_pb_module_header,.dsm_flipbox_child_22 h1.et_pb_module_header,.dsm_flipbox_child_22 h2.et_pb_module_header,.dsm_flipbox_child_22 h3.et_pb_module_header,.dsm_flipbox_child_22 h4.et_pb_module_header,.dsm_flipbox_child_22 h5.et_pb_module_header,.dsm_flipbox_child_22 h6.et_pb_module_header,.dsm_flipbox_child_22 .dsm-subtitle,.dsm_flipbox_child_44 h1.et_pb_module_header,.dsm_flipbox_child_44 h2.et_pb_module_header,.dsm_flipbox_child_44 h3.et_pb_module_header,.dsm_flipbox_child_44 h4.et_pb_module_header,.dsm_flipbox_child_44 h5.et_pb_module_header,.dsm_flipbox_child_44 h6.et_pb_module_header,.dsm_flipbox_child_32 .dsm-subtitle,.dsm_flipbox_child_31 .dsm-subtitle,.dsm_flipbox_child_18 .dsm-subtitle,.dsm_flipbox_child_23 h1.et_pb_module_header,.dsm_flipbox_child_23 h2.et_pb_module_header,.dsm_flipbox_child_23 h3.et_pb_module_header,.dsm_flipbox_child_23 h4.et_pb_module_header,.dsm_flipbox_child_23 h5.et_pb_module_header,.dsm_flipbox_child_23 h6.et_pb_module_header,.dsm_flipbox_child_23 .dsm-subtitle,.dsm_flipbox_child_24 h1.et_pb_module_header,.dsm_flipbox_child_24 h2.et_pb_module_header,.dsm_flipbox_child_24 h3.et_pb_module_header,.dsm_flipbox_child_24 h4.et_pb_module_header,.dsm_flipbox_child_24 h5.et_pb_module_header,.dsm_flipbox_child_24 h6.et_pb_module_header,.dsm_flipbox_child_24 .dsm-subtitle,.dsm_flipbox_child_1 .dsm-subtitle,.dsm_flipbox_child_44 .dsm-subtitle,.dsm_flipbox_child_32 h1.et_pb_module_header,.dsm_flipbox_child_32 h2.et_pb_module_header,.dsm_flipbox_child_32 h3.et_pb_module_header,.dsm_flipbox_child_32 h4.et_pb_module_header,.dsm_flipbox_child_32 h5.et_pb_module_header,.dsm_flipbox_child_32 h6.et_pb_module_header,.dsm_flipbox_child_35 h1.et_pb_module_header,.dsm_flipbox_child_35 h2.et_pb_module_header,.dsm_flipbox_child_35 h3.et_pb_module_header,.dsm_flipbox_child_35 h4.et_pb_module_header,.dsm_flipbox_child_35 h5.et_pb_module_header,.dsm_flipbox_child_35 h6.et_pb_module_header,.dsm_flipbox_child_18 h1.et_pb_module_header,.dsm_flipbox_child_18 h2.et_pb_module_header,.dsm_flipbox_child_18 h3.et_pb_module_header,.dsm_flipbox_child_18 h4.et_pb_module_header,.dsm_flipbox_child_18 h5.et_pb_module_header,.dsm_flipbox_child_18 h6.et_pb_module_header,.dsm_flipbox_child_3 .dsm-subtitle,.dsm_flipbox_child_42 .dsm-subtitle,.dsm_flipbox_child_52 .dsm-subtitle,.dsm_flipbox_child_9 h1.et_pb_module_header,.dsm_flipbox_child_9 h2.et_pb_module_header,.dsm_flipbox_child_9 h3.et_pb_module_header,.dsm_flipbox_child_9 h4.et_pb_module_header,.dsm_flipbox_child_9 h5.et_pb_module_header,.dsm_flipbox_child_9 h6.et_pb_module_header,.dsm_flipbox_child_9 .dsm-subtitle,.dsm_flipbox_child_10 h1.et_pb_module_header,.dsm_flipbox_child_10 h2.et_pb_module_header,.dsm_flipbox_child_10 h3.et_pb_module_header,.dsm_flipbox_child_10 h4.et_pb_module_header,.dsm_flipbox_child_10 h5.et_pb_module_header,.dsm_flipbox_child_10 h6.et_pb_module_header,.dsm_flipbox_child_10 .dsm-subtitle,.dsm_flipbox_child_53 h1.et_pb_module_header,.dsm_flipbox_child_53 h2.et_pb_module_header,.dsm_flipbox_child_53 h3.et_pb_module_header,.dsm_flipbox_child_53 h4.et_pb_module_header,.dsm_flipbox_child_53 h5.et_pb_module_header,.dsm_flipbox_child_53 h6.et_pb_module_header,.dsm_flipbox_child_39 .dsm-subtitle,.dsm_flipbox_child_48 h1.et_pb_module_header,.dsm_flipbox_child_48 h2.et_pb_module_header,.dsm_flipbox_child_48 h3.et_pb_module_header,.dsm_flipbox_child_48 h4.et_pb_module_header,.dsm_flipbox_child_48 h5.et_pb_module_header,.dsm_flipbox_child_48 h6.et_pb_module_header,.dsm_flipbox_child_3 h1.et_pb_module_header,.dsm_flipbox_child_3 h2.et_pb_module_header,.dsm_flipbox_child_3 h3.et_pb_module_header,.dsm_flipbox_child_3 h4.et_pb_module_header,.dsm_flipbox_child_3 h5.et_pb_module_header,.dsm_flipbox_child_3 h6.et_pb_module_header,.dsm_flipbox_child_50 .dsm-subtitle,.dsm_flipbox_child_50 h1.et_pb_module_header,.dsm_flipbox_child_50 h2.et_pb_module_header,.dsm_flipbox_child_50 h3.et_pb_module_header,.dsm_flipbox_child_50 h4.et_pb_module_header,.dsm_flipbox_child_50 h5.et_pb_module_header,.dsm_flipbox_child_50 h6.et_pb_module_header,.dsm_flipbox_child_11 h1.et_pb_module_header,.dsm_flipbox_child_11 h2.et_pb_module_header,.dsm_flipbox_child_11 h3.et_pb_module_header,.dsm_flipbox_child_11 h4.et_pb_module_header,.dsm_flipbox_child_11 h5.et_pb_module_header,.dsm_flipbox_child_11 h6.et_pb_module_header,.dsm_flipbox_child_11 .dsm-subtitle,.dsm_flipbox_child_39 h1.et_pb_module_header,.dsm_flipbox_child_39 h2.et_pb_module_header,.dsm_flipbox_child_39 h3.et_pb_module_header,.dsm_flipbox_child_39 h4.et_pb_module_header,.dsm_flipbox_child_39 h5.et_pb_module_header,.dsm_flipbox_child_39 h6.et_pb_module_header,.dsm_flipbox_child_52 h1.et_pb_module_header,.dsm_flipbox_child_52 h2.et_pb_module_header,.dsm_flipbox_child_52 h3.et_pb_module_header,.dsm_flipbox_child_52 h4.et_pb_module_header,.dsm_flipbox_child_52 h5.et_pb_module_header,.dsm_flipbox_child_52 h6.et_pb_module_header,.dsm_flipbox_child_12 h1.et_pb_module_header,.dsm_flipbox_child_12 h2.et_pb_module_header,.dsm_flipbox_child_12 h3.et_pb_module_header,.dsm_flipbox_child_12 h4.et_pb_module_header,.dsm_flipbox_child_12 h5.et_pb_module_header,.dsm_flipbox_child_12 h6.et_pb_module_header,.dsm_flipbox_child_53 .dsm-subtitle,.dsm_flipbox_child_5 h1.et_pb_module_header,.dsm_flipbox_child_5 h2.et_pb_module_header,.dsm_flipbox_child_5 h3.et_pb_module_header,.dsm_flipbox_child_5 h4.et_pb_module_header,.dsm_flipbox_child_5 h5.et_pb_module_header,.dsm_flipbox_child_5 h6.et_pb_module_header,.dsm_flipbox_child_5 .dsm-subtitle,.dsm_flipbox_child_51 .dsm-subtitle,.dsm_flipbox_child_51 h1.et_pb_module_header,.dsm_flipbox_child_51 h2.et_pb_module_header,.dsm_flipbox_child_51 h3.et_pb_module_header,.dsm_flipbox_child_51 h4.et_pb_module_header,.dsm_flipbox_child_51 h5.et_pb_module_header,.dsm_flipbox_child_51 h6.et_pb_module_header,.dsm_flipbox_child_6 h1.et_pb_module_header,.dsm_flipbox_child_6 h2.et_pb_module_header,.dsm_flipbox_child_6 h3.et_pb_module_header,.dsm_flipbox_child_6 h4.et_pb_module_header,.dsm_flipbox_child_6 h5.et_pb_module_header,.dsm_flipbox_child_6 h6.et_pb_module_header,.dsm_flipbox_child_6 .dsm-subtitle,.dsm_flipbox_child_40 .dsm-subtitle,.dsm_flipbox_child_8 .dsm-subtitle,.dsm_flipbox_child_4 .dsm-subtitle,.dsm_flipbox_child_4 h1.et_pb_module_header,.dsm_flipbox_child_4 h2.et_pb_module_header,.dsm_flipbox_child_4 h3.et_pb_module_header,.dsm_flipbox_child_4 h4.et_pb_module_header,.dsm_flipbox_child_4 h5.et_pb_module_header,.dsm_flipbox_child_4 h6.et_pb_module_header,.dsm_flipbox_child_7 h1.et_pb_module_header,.dsm_flipbox_child_7 h2.et_pb_module_header,.dsm_flipbox_child_7 h3.et_pb_module_header,.dsm_flipbox_child_7 h4.et_pb_module_header,.dsm_flipbox_child_7 h5.et_pb_module_header,.dsm_flipbox_child_7 h6.et_pb_module_header,.dsm_flipbox_child_7 .dsm-subtitle,.dsm_flipbox_child_40 h1.et_pb_module_header,.dsm_flipbox_child_40 h2.et_pb_module_header,.dsm_flipbox_child_40 h3.et_pb_module_header,.dsm_flipbox_child_40 h4.et_pb_module_header,.dsm_flipbox_child_40 h5.et_pb_module_header,.dsm_flipbox_child_40 h6.et_pb_module_header,.dsm_flipbox_child_42 h1.et_pb_module_header,.dsm_flipbox_child_42 h2.et_pb_module_header,.dsm_flipbox_child_42 h3.et_pb_module_header,.dsm_flipbox_child_42 h4.et_pb_module_header,.dsm_flipbox_child_42 h5.et_pb_module_header,.dsm_flipbox_child_42 h6.et_pb_module_header,.dsm_flipbox_child_8 h1.et_pb_module_header,.dsm_flipbox_child_8 h2.et_pb_module_header,.dsm_flipbox_child_8 h3.et_pb_module_header,.dsm_flipbox_child_8 h4.et_pb_module_header,.dsm_flipbox_child_8 h5.et_pb_module_header,.dsm_flipbox_child_8 h6.et_pb_module_header,.dsm_flipbox_child_38 .dsm-subtitle,.dsm_flipbox_child_29 h1.et_pb_module_header,.dsm_flipbox_child_29 h2.et_pb_module_header,.dsm_flipbox_child_29 h3.et_pb_module_header,.dsm_flipbox_child_29 h4.et_pb_module_header,.dsm_flipbox_child_29 h5.et_pb_module_header,.dsm_flipbox_child_29 h6.et_pb_module_header,.dsm_flipbox_child_15 .dsm-subtitle,.dsm_flipbox_child_13 h1.et_pb_module_header,.dsm_flipbox_child_13 h2.et_pb_module_header,.dsm_flipbox_child_13 h3.et_pb_module_header,.dsm_flipbox_child_13 h4.et_pb_module_header,.dsm_flipbox_child_13 h5.et_pb_module_header,.dsm_flipbox_child_13 h6.et_pb_module_header,.dsm_flipbox_child_37 h1.et_pb_module_header,.dsm_flipbox_child_37 h2.et_pb_module_header,.dsm_flipbox_child_37 h3.et_pb_module_header,.dsm_flipbox_child_37 h4.et_pb_module_header,.dsm_flipbox_child_37 h5.et_pb_module_header,.dsm_flipbox_child_37 h6.et_pb_module_header,.dsm_flipbox_child_35 .dsm-subtitle,.dsm_flipbox_child_43 h1.et_pb_module_header,.dsm_flipbox_child_43 h2.et_pb_module_header,.dsm_flipbox_child_43 h3.et_pb_module_header,.dsm_flipbox_child_43 h4.et_pb_module_header,.dsm_flipbox_child_43 h5.et_pb_module_header,.dsm_flipbox_child_43 h6.et_pb_module_header,.dsm_flipbox_child_14 .dsm-subtitle,.dsm_flipbox_child_14 h1.et_pb_module_header,.dsm_flipbox_child_14 h2.et_pb_module_header,.dsm_flipbox_child_14 h3.et_pb_module_header,.dsm_flipbox_child_14 h4.et_pb_module_header,.dsm_flipbox_child_14 h5.et_pb_module_header,.dsm_flipbox_child_14 h6.et_pb_module_header,.dsm_flipbox_child_36 .dsm-subtitle,.dsm_flipbox_child_16 h1.et_pb_module_header,.dsm_flipbox_child_16 h2.et_pb_module_header,.dsm_flipbox_child_16 h3.et_pb_module_header,.dsm_flipbox_child_16 h4.et_pb_module_header,.dsm_flipbox_child_16 h5.et_pb_module_header,.dsm_flipbox_child_16 h6.et_pb_module_header,.dsm_flipbox_child_13 .dsm-subtitle,.dsm_flipbox_child_36 h1.et_pb_module_header,.dsm_flipbox_child_36 h2.et_pb_module_header,.dsm_flipbox_child_36 h3.et_pb_module_header,.dsm_flipbox_child_36 h4.et_pb_module_header,.dsm_flipbox_child_36 h5.et_pb_module_header,.dsm_flipbox_child_36 h6.et_pb_module_header,.dsm_flipbox_child_16 .dsm-subtitle,.dsm_flipbox_child_49 h1.et_pb_module_header,.dsm_flipbox_child_49 h2.et_pb_module_header,.dsm_flipbox_child_49 h3.et_pb_module_header,.dsm_flipbox_child_49 h4.et_pb_module_header,.dsm_flipbox_child_49 h5.et_pb_module_header,.dsm_flipbox_child_49 h6.et_pb_module_header,.dsm_flipbox_child_49 .dsm-subtitle,.dsm_flipbox_child_12 .dsm-subtitle,.dsm_flipbox_child_38 h1.et_pb_module_header,.dsm_flipbox_child_38 h2.et_pb_module_header,.dsm_flipbox_child_38 h3.et_pb_module_header,.dsm_flipbox_child_38 h4.et_pb_module_header,.dsm_flipbox_child_38 h5.et_pb_module_header,.dsm_flipbox_child_38 h6.et_pb_module_header,.dsm_flipbox_child_17 h1.et_pb_module_header,.dsm_flipbox_child_17 h2.et_pb_module_header,.dsm_flipbox_child_17 h3.et_pb_module_header,.dsm_flipbox_child_17 h4.et_pb_module_header,.dsm_flipbox_child_17 h5.et_pb_module_header,.dsm_flipbox_child_17 h6.et_pb_module_header,.dsm_flipbox_child_17 .dsm-subtitle,.dsm_flipbox_child_48 .dsm-subtitle,.dsm_flipbox_child_15 h1.et_pb_module_header,.dsm_flipbox_child_15 h2.et_pb_module_header,.dsm_flipbox_child_15 h3.et_pb_module_header,.dsm_flipbox_child_15 h4.et_pb_module_header,.dsm_flipbox_child_15 h5.et_pb_module_header,.dsm_flipbox_child_15 h6.et_pb_module_header,.dsm_flipbox_child_37 .dsm-subtitle{line-height:1em}.et_pb_section_19.et_pb_section,.et_pb_section_17.et_pb_section,.et_pb_section_15.et_pb_section,.et_pb_section_12.et_pb_section,.et_pb_section_28.et_pb_section,.et_pb_section_6.et_pb_section,.et_pb_section_7.et_pb_section,.et_pb_section_21.et_pb_section,.et_pb_section_18.et_pb_section,.et_pb_section_13.et_pb_section,.et_pb_section_24.et_pb_section,.et_pb_section_22.et_pb_section,.et_pb_section_8.et_pb_section,.et_pb_section_26.et_pb_section,.et_pb_section_10.et_pb_section,.et_pb_section_4.et_pb_section,.et_pb_section_20.et_pb_section,.et_pb_section_30.et_pb_section,.et_pb_section_27.et_pb_section,.et_pb_section_16.et_pb_section,.et_pb_section_9.et_pb_section,.et_pb_section_29.et_pb_section,.et_pb_section_11.et_pb_section,.et_pb_section_25.et_pb_section,.et_pb_section_5.et_pb_section,.et_pb_section_14.et_pb_section,.et_pb_section_23.et_pb_section{margin-top:-5px}.et_pb_button_23_wrapper,.et_pb_button_21_wrapper,.et_pb_button_19_wrapper,.et_pb_button_20_wrapper,.et_pb_button_22_wrapper,.et_pb_button_16_wrapper,.et_pb_button_18_wrapper,.et_pb_button_1_wrapper,.et_pb_button_17_wrapper,.et_pb_button_3_wrapper,.et_pb_button_9_wrapper,.et_pb_button_11_wrapper,.et_pb_button_12_wrapper,.et_pb_button_27_wrapper,.et_pb_button_24_wrapper,.et_pb_button_13_wrapper,.et_pb_button_7_wrapper,.et_pb_button_6_wrapper,.et_pb_button_26_wrapper,.et_pb_button_8_wrapper,.et_pb_button_14_wrapper,.et_pb_button_5_wrapper,.et_pb_button_25_wrapper,.et_pb_button_10_wrapper,.et_pb_button_4_wrapper,.et_pb_button_2_wrapper,.et_pb_button_15_wrapper{margin-top:-5px!important}body #page-container .et_pb_section .et_pb_button_8,body #page-container .et_pb_section .et_pb_button_19,body #page-container .et_pb_section .et_pb_button_7,body #page-container .et_pb_section .et_pb_button_10,body #page-container .et_pb_section .et_pb_button_18,body #page-container .et_pb_section .et_pb_button_11,body #page-container .et_pb_section .et_pb_button_6,body #page-container .et_pb_section .et_pb_button_2,body #page-container .et_pb_section .et_pb_button_25,body #page-container .et_pb_section .et_pb_button_9,body #page-container .et_pb_section .et_pb_button_12,body #page-container .et_pb_section .et_pb_button_22,body #page-container .et_pb_section .et_pb_button_27,body #page-container .et_pb_section .et_pb_button_17,body #page-container .et_pb_section .et_pb_button_14,body #page-container .et_pb_section .et_pb_button_21,body #page-container .et_pb_section .et_pb_button_23,body #page-container .et_pb_section .et_pb_button_15,body #page-container .et_pb_section .et_pb_button_4,body #page-container .et_pb_section .et_pb_button_1,body #page-container .et_pb_section .et_pb_button_16,body #page-container .et_pb_section .et_pb_button_20,body #page-container .et_pb_section .et_pb_button_5,body #page-container .et_pb_section .et_pb_button_13,body #page-container .et_pb_section .et_pb_button_3,body #page-container .et_pb_section .et_pb_button_26,body #page-container .et_pb_section .et_pb_button_24{color:#1B1B19!important;border-width:0px!important;border-radius:30px;font-size:17px;font-weight:800!important;background-color:#FFFFFF}body #page-container .et_pb_section .et_pb_button_3:after,body #page-container .et_pb_section .et_pb_button_21:after,body #page-container .et_pb_section .et_pb_button_25:after,body #page-container .et_pb_section .et_pb_button_20:after,body #page-container .et_pb_section .et_pb_button_19:after,body #page-container .et_pb_section .et_pb_button_5:after,body #page-container .et_pb_section .et_pb_button_4:after,body #page-container .et_pb_section .et_pb_button_8:after,body #page-container .et_pb_section .et_pb_button_6:after,body #page-container .et_pb_section .et_pb_button_7:after,body #page-container .et_pb_section .et_pb_button_26:after,body #page-container .et_pb_section .et_pb_button_22:after,body #page-container .et_pb_section .et_pb_button_1:after,body #page-container .et_pb_section .et_pb_button_12:after,body #page-container .et_pb_section .et_pb_button_10:after,body #page-container .et_pb_section .et_pb_button_2:after,body #page-container .et_pb_section .et_pb_button_17:after,body #page-container .et_pb_section .et_pb_button_27:after,body #page-container .et_pb_section .et_pb_button_24:after,body #page-container .et_pb_section .et_pb_button_16:after,body #page-container .et_pb_section .et_pb_button_11:after,body #page-container .et_pb_section .et_pb_button_13:after,body #page-container .et_pb_section .et_pb_button_14:after,body #page-container .et_pb_section .et_pb_button_23:after,body #page-container .et_pb_section .et_pb_button_15:after,body #page-container .et_pb_section .et_pb_button_18:after,body #page-container .et_pb_section .et_pb_button_9:after{font-size:1.6em}body.et_button_custom_icon #page-container .et_pb_button_14:after,body.et_button_custom_icon #page-container .et_pb_button_4:after,body.et_button_custom_icon #page-container .et_pb_button_26:after,body.et_button_custom_icon #page-container .et_pb_button_15:after,body.et_button_custom_icon #page-container .et_pb_button_21:after,body.et_button_custom_icon #page-container .et_pb_button_16:after,body.et_button_custom_icon #page-container .et_pb_button_27:after,body.et_button_custom_icon #page-container .et_pb_button_5:after,body.et_button_custom_icon #page-container .et_pb_button_3:after,body.et_button_custom_icon #page-container .et_pb_button_1:after,body.et_button_custom_icon #page-container .et_pb_button_13:after,body.et_button_custom_icon #page-container .et_pb_button_22:after,body.et_button_custom_icon #page-container .et_pb_button_20:after,body.et_button_custom_icon #page-container .et_pb_button_12:after,body.et_button_custom_icon #page-container .et_pb_button_23:after,body.et_button_custom_icon #page-container .et_pb_button_25:after,body.et_button_custom_icon #page-container .et_pb_button_2:after,body.et_button_custom_icon #page-container .et_pb_button_18:after,body.et_button_custom_icon #page-container .et_pb_button_19:after,body.et_button_custom_icon #page-container .et_pb_button_8:after,body.et_button_custom_icon #page-container .et_pb_button_10:after,body.et_button_custom_icon #page-container .et_pb_button_11:after,body.et_button_custom_icon #page-container .et_pb_button_7:after,body.et_button_custom_icon #page-container .et_pb_button_24:after,body.et_button_custom_icon #page-container .et_pb_button_6:after,body.et_button_custom_icon #page-container .et_pb_button_17:after,body.et_button_custom_icon #page-container .et_pb_button_9:after{font-size:17px}.dsm_flipbox_23 .dsm-flipbox,.dsm_flipbox_20 .dsm-flipbox,.dsm_flipbox_21 .dsm-flipbox,.dsm_flipbox_24 .dsm-flipbox,.dsm_flipbox_22 .dsm-flipbox,.dsm_flipbox_25 .dsm-flipbox,.dsm_flipbox_26 .dsm-flipbox,.dsm_flipbox_0 .dsm-flipbox,.dsm_flipbox_2 .dsm-flipbox,.dsm_flipbox_5 .dsm-flipbox,.dsm_flipbox_15 .dsm-flipbox,.dsm_flipbox_1 .dsm-flipbox,.dsm_flipbox_10 .dsm-flipbox,.dsm_flipbox_7 .dsm-flipbox,.dsm_flipbox_16 .dsm-flipbox,.dsm_flipbox_3 .dsm-flipbox,.dsm_flipbox_11 .dsm-flipbox,.dsm_flipbox_9 .dsm-flipbox,.dsm_flipbox_4 .dsm-flipbox,.dsm_flipbox_12 .dsm-flipbox,.dsm_flipbox_17 .dsm-flipbox,.dsm_flipbox_6 .dsm-flipbox,.dsm_flipbox_18 .dsm-flipbox,.dsm_flipbox_13 .dsm-flipbox,.dsm_flipbox_8 .dsm-flipbox,.dsm_flipbox_19 .dsm-flipbox,.dsm_flipbox_14 .dsm-flipbox{height:250px}.et_pb_column_7,.et_pb_column_6,.et_pb_column_5,.et_pb_column_4{background-color:#FFFFFF;border-width:1px;border-color:#EAEAEA;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px}.dsm_flipbox_child_0{background-image:url(https://media.istockphoto.com/id/1295114854/photo/empty-red-armchairs-of-a-theater-ready-for-a-show.webp?b=1&s=170667a&w=0&k=20&c=W__8iZMDp4XtPAMPRuTPPYzszc1A4fdajYGn0ox9kG4=);min-height:250px}.dsm_flipbox .dsm_flipbox_child_11 .dsm-content,.dsm_flipbox .dsm_flipbox_child_25 .dsm-content,.dsm_flipbox .dsm_flipbox_child_23 .dsm-content,.dsm_flipbox .dsm_flipbox_child_21 .dsm-content,.dsm_flipbox .dsm_flipbox_child_47 .dsm-content,.dsm_flipbox .dsm_flipbox_child_49 .dsm-content,.dsm_flipbox .dsm_flipbox_child_41 .dsm-content,.dsm_flipbox .dsm_flipbox_child_19 .dsm-content,.dsm_flipbox .dsm_flipbox_child_15 .dsm-content,.dsm_flipbox .dsm_flipbox_child_9 .dsm-content,.dsm_flipbox .dsm_flipbox_child_29 .dsm-content,.dsm_flipbox .dsm_flipbox_child_27 .dsm-content,.dsm_flipbox .dsm_flipbox_child_3 .dsm-content,.dsm_flipbox .dsm_flipbox_child_39 .dsm-content,.dsm_flipbox .dsm_flipbox_child_53 .dsm-content,.dsm_flipbox .dsm_flipbox_child_37 .dsm-content,.dsm_flipbox .dsm_flipbox_child_1 .dsm-content,.dsm_flipbox .dsm_flipbox_child_43 .dsm-content,.dsm_flipbox .dsm_flipbox_child_35 .dsm-content,.dsm_flipbox .dsm_flipbox_child_17 .dsm-content,.dsm_flipbox .dsm_flipbox_child_33 .dsm-content,.dsm_flipbox .dsm_flipbox_child_5 .dsm-content,.dsm_flipbox .dsm_flipbox_child_31 .dsm-content,.dsm_flipbox .dsm_flipbox_child_51 .dsm-content,.dsm_flipbox .dsm_flipbox_child_45 .dsm-content,.dsm_flipbox .dsm_flipbox_child_7 .dsm-content{font-weight:600}.dsm_flipbox_child_13,.dsm_flipbox_child_7,.dsm_flipbox_child_49,.dsm_flipbox_child_1,.dsm_flipbox_child_51,.dsm_flipbox_child_9,.dsm_flipbox_child_15,.dsm_flipbox_child_3,.dsm_flipbox_child_19,.dsm_flipbox_child_31,.dsm_flipbox_child_39,.dsm_flipbox_child_37,.dsm_flipbox_child_45,.dsm_flipbox_child_21,.dsm_flipbox_child_27,.dsm_flipbox_child_33,.dsm_flipbox_child_43,.dsm_flipbox_child_25{background-color:#1B1B19;min-height:250px;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px}.dsm_flipbox_child_2{background-image:url(https://media.istockphoto.com/id/947659542/photo/vintage-8mm-film-reels-of-home-movies-history-and-memories.webp?b=1&s=170667a&w=0&k=20&c=1Yxlg6LwlVmdrvtLRW25xGTqpoyzYHO_yu7B67nJa6A=);min-height:250px}.dsm_flipbox_child_4{background-image:url(https://media.istockphoto.com/id/947659542/photo/vintage-8mm-film-reels-of-home-movies-history-and-memories.webp?b=1&s=170667a&w=0&k=20&c=1Yxlg6LwlVmdrvtLRW25xGTqpoyzYHO_yu7B67nJa6A=);min-height:250px}.dsm_flipbox_child_29,.dsm_flipbox_child_17,.dsm_flipbox_child_41,.dsm_flipbox_child_5,.dsm_flipbox_child_11,.dsm_flipbox_child_35,.dsm_flipbox_child_47,.dsm_flipbox_child_53,.dsm_flipbox_child_23{background-color:#1B1B19;min-height:250px;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;padding-top:15px!important;padding-bottom:15px!important}.dsm_flipbox_child_6{background-image:url(https://media.istockphoto.com/id/1295114854/photo/empty-red-armchairs-of-a-theater-ready-for-a-show.webp?b=1&s=170667a&w=0&k=20&c=W__8iZMDp4XtPAMPRuTPPYzszc1A4fdajYGn0ox9kG4=);min-height:250px}.dsm_flipbox_child_8{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Business_Form-800x533.jpg);min-height:250px}.dsm_flipbox_child_10{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Coaster-800x533.jpg);min-height:250px}.dsm_flipbox_child_12{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Doorhanger-800x800.jpg);min-height:250px}.dsm_flipbox .dsm_flipbox_child_13 .dsm-content{font-weight:600;text-align:center}.dsm_flipbox_child_14{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Envelope-800x560.jpg);min-height:250px}.dsm_flipbox_child_16{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Flyer_Table-800x450.jpg);min-height:250px}.dsm_flipbox_child_18{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Gift_Certificate-800x533.jpg);min-height:250px}.dsm_flipbox_child_20{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Greeting_Card-800x600.jpg);min-height:250px}.dsm_flipbox_child_22{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Invitation-800x800.jpg);min-height:250px}.dsm_flipbox_child_24{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Labels-800x450.jpg);min-height:250px}.dsm_flipbox_child_26{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Laminating-scaled.jpg);min-height:250px}.dsm_flipbox_child_28{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Letterhead-800x640.jpg);min-height:250px}.dsm_flipbox_child_30{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Magnets-800x800.jpg);min-height:250px}.dsm_flipbox_child_32{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Menus-800x604.jpg);min-height:250px}.dsm_flipbox_child_34{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Newsletter-800x800.jpg);min-height:250px}.dsm_flipbox_child_36{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Notepad-800x600.jpg);min-height:250px}.dsm_flipbox_child_38{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Placemat-800x533.jpg);min-height:250px}.dsm_flipbox_child_40{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Postcard-800x600.jpg);min-height:250px}.dsm_flipbox_child_42{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Poster-800x800.jpg);min-height:250px}.dsm_flipbox_child_44{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Rack_Card-800x533.jpg);min-height:250px}.dsm_flipbox_child_46{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Self_Inking_Stamp-800x533.jpg);min-height:250px}.dsm_flipbox_child_48{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Tags-800x604.jpg);min-height:250px}.dsm_flipbox_child_50{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Tickets-scaled.jpg);min-height:250px}.dsm_flipbox_child_52{background-image:url(https://www.sussexprinting.com/wp-content/uploads/2022/05/Wedding_Invitations-800x603.jpg);min-height:250px}@media only screen and (max-width:980px){div.et_pb_section.et_pb_section_0{background-size:cover;background-repeat:no-repeat;background-position:center;background-blend-mode:normal;background-image:initial!important}body #page-container .et_pb_section .et_pb_button_21:after,body #page-container .et_pb_section .et_pb_button_5:after,body #page-container .et_pb_section .et_pb_button_24:after,body #page-container .et_pb_section .et_pb_button_6:after,body #page-container .et_pb_section .et_pb_button_7:after,body #page-container .et_pb_section .et_pb_button_23:after,body #page-container .et_pb_section .et_pb_button_8:after,body #page-container .et_pb_section .et_pb_button_9:after,body #page-container .et_pb_section .et_pb_button_22:after,body #page-container .et_pb_section .et_pb_button_10:after,body #page-container .et_pb_section .et_pb_button_11:after,body #page-container .et_pb_section .et_pb_button_4:after,body #page-container .et_pb_section .et_pb_button_12:after,body #page-container .et_pb_section .et_pb_button_20:after,body #page-container .et_pb_section .et_pb_button_13:after,body #page-container .et_pb_section .et_pb_cta_0.et_pb_promo .et_pb_promo_button.et_pb_button:after,body #page-container .et_pb_section .et_pb_button_14:after,body #page-container .et_pb_section .et_pb_button_19:after,body #page-container .et_pb_section .et_pb_button_15:after,body #page-container .et_pb_section .et_pb_button_16:after,body #page-container .et_pb_section .et_pb_button_18:after,body #page-container .et_pb_section .et_pb_button_25:after,body #page-container .et_pb_section .et_pb_button_17:after,body #page-container .et_pb_section .et_pb_button_27:after,body #page-container .et_pb_section .et_pb_button_2:after,body #page-container .et_pb_section .et_pb_button_0:after,body #page-container .et_pb_section .et_pb_button_26:after,body #page-container .et_pb_section .et_pb_button_3:after,body #page-container .et_pb_section .et_pb_button_1:after{display:inline-block;opacity:0}body #page-container .et_pb_section .et_pb_button_25:hover:after,body #page-container .et_pb_section .et_pb_button_10:hover:after,body #page-container .et_pb_section .et_pb_button_4:hover:after,body #page-container .et_pb_section .et_pb_button_11:hover:after,body #page-container .et_pb_section .et_pb_button_1:hover:after,body #page-container .et_pb_section .et_pb_button_12:hover:after,body #page-container .et_pb_section .et_pb_button_20:hover:after,body #page-container .et_pb_section .et_pb_button_13:hover:after,body #page-container .et_pb_section .et_pb_button_2:hover:after,body #page-container .et_pb_section .et_pb_button_27:hover:after,body #page-container .et_pb_section .et_pb_button_14:hover:after,body #page-container .et_pb_section .et_pb_button_19:hover:after,body #page-container .et_pb_section .et_pb_button_0:hover:after,body #page-container .et_pb_section .et_pb_button_15:hover:after,body #page-container .et_pb_section .et_pb_button_18:hover:after,body #page-container .et_pb_section .et_pb_button_16:hover:after,body #page-container .et_pb_section .et_pb_cta_0.et_pb_promo .et_pb_promo_button.et_pb_button:hover:after,body #page-container .et_pb_section .et_pb_button_9:hover:after,body #page-container .et_pb_section .et_pb_button_21:hover:after,body #page-container .et_pb_section .et_pb_button_22:hover:after,body #page-container .et_pb_section .et_pb_button_23:hover:after,body #page-container .et_pb_section .et_pb_button_5:hover:after,body #page-container .et_pb_section .et_pb_button_24:hover:after,body #page-container .et_pb_section .et_pb_button_3:hover:after,body #page-container .et_pb_section .et_pb_button_6:hover:after,body #page-container .et_pb_section .et_pb_button_7:hover:after,body #page-container .et_pb_section .et_pb_button_8:hover:after,body #page-container .et_pb_section .et_pb_button_17:hover:after,body #page-container .et_pb_section .et_pb_button_26:hover:after{opacity:1}.et_pb_text_1{border-left-width:3px;border-left-color:#179DD8}.dsm_flipbox_20,.dsm_flipbox_16,.dsm_flipbox_child_34,.dsm_flipbox_child_49,.dsm_flipbox_child_48,.dsm_flipbox_23,.dsm_flipbox_child_35,.dsm_flipbox_17,.dsm_flipbox_24,.dsm_flipbox_21,.dsm_flipbox_child_36,.dsm_flipbox_child_47,.dsm_flipbox_child_42,.dsm_flipbox_child_37,.dsm_flipbox_child_53,.dsm_flipbox_25,.dsm_flipbox_18,.dsm_flipbox_child_51,.dsm_flipbox_child_46,.dsm_flipbox_child_43,.dsm_flipbox_child_38,.dsm_flipbox_child_45,.dsm_flipbox_child_50,.dsm_flipbox_child_41,.dsm_flipbox_child_39,.dsm_flipbox_19,.dsm_flipbox_child_40,.dsm_flipbox_child_44,.dsm_flipbox_child_52,.dsm_flipbox_22,.dsm_flipbox_child_25,.dsm_flipbox_child_33,.dsm_flipbox_child_7,.dsm_flipbox_6,.dsm_flipbox_child_13,.dsm_flipbox_child_12,.dsm_flipbox_5,.dsm_flipbox_child_11,.dsm_flipbox_child_10,.dsm_flipbox_4,.dsm_flipbox_child_9,.dsm_flipbox_child_8,.dsm_flipbox_3,.dsm_flipbox_child_6,.dsm_flipbox_child_32,.dsm_flipbox_2,.dsm_flipbox_child_5,.dsm_flipbox_child_4,.dsm_flipbox_1,.dsm_flipbox_child_3,.dsm_flipbox_child_2,.dsm_flipbox_0,.dsm_flipbox_child_1,.dsm_flipbox_child_0,.et_pb_section_3,.dsm_flipbox_child_14,.dsm_flipbox_child_15,.dsm_flipbox_7,.dsm_flipbox_child_16,.dsm_flipbox_15,.dsm_flipbox_child_31,.dsm_flipbox_child_30,.dsm_flipbox_14,.dsm_flipbox_child_29,.dsm_flipbox_child_28,.dsm_flipbox_13,.dsm_flipbox_child_27,.dsm_flipbox_child_26,.dsm_flipbox_12,.dsm_flipbox_child_24,.dsm_flipbox_11,.dsm_flipbox_child_23,.dsm_flipbox_child_22,.dsm_flipbox_10,.dsm_flipbox_child_21,.dsm_flipbox_child_20,.dsm_flipbox_9,.dsm_flipbox_child_19,.dsm_flipbox_child_18,.dsm_flipbox_8,.dsm_flipbox_child_17,.dsm_flipbox_26{min-height:400px}.et_pb_text_3{border-left-width:3px;border-left-color:#E12C93}}@media only screen and (max-width:767px){div.et_pb_section.et_pb_section_0>.et_pb_background_mask{transform:scale(-1,1);background-size:cover;background-image:url(data:image/svg+xml;base64,PHN2ZyAgZmlsbD0iUkdCQSgxMzEsMCwyMzMsMCkiIHZpZXdCb3g9IjAgMCAxOTIwIDI1NjAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIHNsaWNlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik01ODguNjEsMEg3MzYuNDVMMCwyNDMuMTNWMTk0LjMyWk0wLDYyOC4wOCwxOTAyLjQ4LDBIMTc1NC42M0wwLDU3OS4yN1pNMCwyNTYwSDE5MjBWMzMwLjM1TDAsOTY0LjIxWiIvPjwvc3ZnPg==);background-position:center top}body #page-container .et_pb_section .et_pb_button_21:after,body #page-container .et_pb_section .et_pb_button_5:after,body #page-container .et_pb_section .et_pb_button_24:after,body #page-container .et_pb_section .et_pb_button_6:after,body #page-container .et_pb_section .et_pb_button_7:after,body #page-container .et_pb_section .et_pb_button_23:after,body #page-container .et_pb_section .et_pb_button_8:after,body #page-container .et_pb_section .et_pb_button_9:after,body #page-container .et_pb_section .et_pb_button_22:after,body #page-container .et_pb_section .et_pb_button_10:after,body #page-container .et_pb_section .et_pb_button_11:after,body #page-container .et_pb_section .et_pb_button_4:after,body #page-container .et_pb_section .et_pb_button_12:after,body #page-container .et_pb_section .et_pb_button_20:after,body #page-container .et_pb_section .et_pb_button_13:after,body #page-container .et_pb_section .et_pb_cta_0.et_pb_promo .et_pb_promo_button.et_pb_button:after,body #page-container .et_pb_section .et_pb_button_14:after,body #page-container .et_pb_section .et_pb_button_19:after,body #page-container .et_pb_section .et_pb_button_15:after,body #page-container .et_pb_section .et_pb_button_16:after,body #page-container .et_pb_section .et_pb_button_18:after,body #page-container .et_pb_section .et_pb_button_25:after,body #page-container .et_pb_section .et_pb_button_17:after,body #page-container .et_pb_section .et_pb_button_27:after,body #page-container .et_pb_section .et_pb_button_2:after,body #page-container .et_pb_section .et_pb_button_0:after,body #page-container .et_pb_section .et_pb_button_26:after,body #page-container .et_pb_section .et_pb_button_3:after,body #page-container .et_pb_section .et_pb_button_1:after{display:inline-block;opacity:0}body #page-container .et_pb_section .et_pb_button_25:hover:after,body #page-container .et_pb_section .et_pb_button_10:hover:after,body #page-container .et_pb_section .et_pb_button_4:hover:after,body #page-container .et_pb_section .et_pb_button_11:hover:after,body #page-container .et_pb_section .et_pb_button_1:hover:after,body #page-container .et_pb_section .et_pb_button_12:hover:after,body #page-container .et_pb_section .et_pb_button_20:hover:after,body #page-container .et_pb_section .et_pb_button_13:hover:after,body #page-container .et_pb_section .et_pb_button_2:hover:after,body #page-container .et_pb_section .et_pb_button_27:hover:after,body #page-container .et_pb_section .et_pb_button_14:hover:after,body #page-container .et_pb_section .et_pb_button_19:hover:after,body #page-container .et_pb_section .et_pb_button_0:hover:after,body #page-container .et_pb_section .et_pb_button_15:hover:after,body #page-container .et_pb_section .et_pb_button_18:hover:after,body #page-container .et_pb_section .et_pb_button_16:hover:after,body #page-container .et_pb_section .et_pb_cta_0.et_pb_promo .et_pb_promo_button.et_pb_button:hover:after,body #page-container .et_pb_section .et_pb_button_9:hover:after,body #page-container .et_pb_section .et_pb_button_21:hover:after,body #page-container .et_pb_section .et_pb_button_22:hover:after,body #page-container .et_pb_section .et_pb_button_23:hover:after,body #page-container .et_pb_section .et_pb_button_5:hover:after,body #page-container .et_pb_section .et_pb_button_24:hover:after,body #page-container .et_pb_section .et_pb_button_3:hover:after,body #page-container .et_pb_section .et_pb_button_6:hover:after,body #page-container .et_pb_section .et_pb_button_7:hover:after,body #page-container .et_pb_section .et_pb_button_8:hover:after,body #page-container .et_pb_section .et_pb_button_17:hover:after,body #page-container .et_pb_section .et_pb_button_26:hover:after{opacity:1}.et_pb_text_1{border-left-width:3px;border-left-color:#179DD8}.dsm_flipbox_20,.dsm_flipbox_16,.dsm_flipbox_child_34,.dsm_flipbox_child_49,.dsm_flipbox_child_48,.dsm_flipbox_23,.dsm_flipbox_child_35,.dsm_flipbox_17,.dsm_flipbox_24,.dsm_flipbox_21,.dsm_flipbox_child_36,.dsm_flipbox_child_47,.dsm_flipbox_child_42,.dsm_flipbox_child_37,.dsm_flipbox_child_53,.dsm_flipbox_25,.dsm_flipbox_18,.dsm_flipbox_child_51,.dsm_flipbox_child_46,.dsm_flipbox_child_43,.dsm_flipbox_child_38,.dsm_flipbox_child_45,.dsm_flipbox_child_50,.dsm_flipbox_child_41,.dsm_flipbox_child_39,.dsm_flipbox_19,.dsm_flipbox_child_40,.dsm_flipbox_child_44,.dsm_flipbox_child_52,.dsm_flipbox_22,.dsm_flipbox_child_25,.dsm_flipbox_child_33,.dsm_flipbox_child_7,.dsm_flipbox_6,.dsm_flipbox_child_13,.dsm_flipbox_child_12,.dsm_flipbox_5,.dsm_flipbox_child_11,.dsm_flipbox_child_10,.dsm_flipbox_4,.dsm_flipbox_child_9,.dsm_flipbox_child_8,.dsm_flipbox_3,.dsm_flipbox_child_6,.dsm_flipbox_child_32,.dsm_flipbox_2,.dsm_flipbox_child_5,.dsm_flipbox_child_4,.dsm_flipbox_1,.dsm_flipbox_child_3,.dsm_flipbox_child_2,.dsm_flipbox_0,.dsm_flipbox_child_1,.dsm_flipbox_child_0,.et_pb_section_3,.dsm_flipbox_child_14,.dsm_flipbox_child_15,.dsm_flipbox_7,.dsm_flipbox_child_16,.dsm_flipbox_15,.dsm_flipbox_child_31,.dsm_flipbox_child_30,.dsm_flipbox_14,.dsm_flipbox_child_29,.dsm_flipbox_child_28,.dsm_flipbox_13,.dsm_flipbox_child_27,.dsm_flipbox_child_26,.dsm_flipbox_12,.dsm_flipbox_child_24,.dsm_flipbox_11,.dsm_flipbox_child_23,.dsm_flipbox_child_22,.dsm_flipbox_10,.dsm_flipbox_child_21,.dsm_flipbox_child_20,.dsm_flipbox_9,.dsm_flipbox_child_19,.dsm_flipbox_child_18,.dsm_flipbox_8,.dsm_flipbox_child_17,.dsm_flipbox_26{min-height:300px}.et_pb_text_3{border-left-width:3px;border-left-color:#E12C93}}</style>       
+               
+       <script type="text/javascript">jQuery(function() {jQuery.ajax({url: 'https://www.sussexprinting.com/wp-admin/admin-ajax.php',type: "POST",data: {action: "forminator_get_nonce",},success: function (response) {jQuery('#forminator-module-78 #forminator_nonce').val( response.data );}});})</script>        <script type="text/javascript">
+           jQuery(function () {
+               window.Forminator_Cform_Paginations = window.Forminator_Cform_Paginations || [];
+                               window.Forminator_Cform_Paginations[78] =
+                       {"has-pagination":false,"pagination-header-design":"show","pagination-header":"nav","last-steps":"Finish","last-previous":"Previous","pagination-labels":"default","has-paypal":false};
+
+               var runForminatorFront = function () {
+                   jQuery('#forminator-module-78[data-forminator-render="0"]')
+                       .forminatorFront({"form_type":"custom-form","inline_validation":true,"print_value":false,"rules":"\"name-1\": \"required\",\"name-1\": \"trim\",\"email-1\": {\n\"required\": true,\"emailWP\": true,},\n\"phone-1\": {\"required\": true,\"trim\": true,},\"text-1\": {\"required\": true,},\"textarea-1\": {\"required\": true,\"maxlength\": 180,},","messages":"\"name-1\": \"This field is required. Please input your name.\",\n\"email-1\": {\n\"required\": \"This field is required. Please input a valid email.\",\n\"emailWP\": \"This is not a valid email.\",\n\"email\": \"This is not a valid email.\",\n},\n\"phone-1\": {\n\"required\": \"This field is required. Please input a phone number.\",\n\"trim\": \"This field is required. Please input a phone number.\",\n\"phone\": \"Please enter a valid phone number.\",\n},\n\"text-1\": {\"required\": \"This field is required. Please enter text.\",\n},\"textarea-1\": {\"required\": \"This field is required. Please enter text.\",\n\"maxlength\": \"You exceeded the allowed amount of characters. Please check again.\",\n},","conditions":{"fields":[],"relations":{"name-1":[],"email-1":[],"phone-1":[],"text-1":[],"textarea-1":[],"captcha-1":[],"submit":[]}},"calendar":"{\"days\":[\"Su\",\"Mo\",\"Tu\",\"We\",\"Th\",\"Fr\",\"Sa\"],\"months\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"]}","paypal_config":{"live_id":"","sandbox_id":"","redirect_url":"https:\/\/www.sussexprinting.com","form_id":78},"forminator_fields":["address","calculation","captcha","consent","currency","custom","date","email","gdprcheckbox","group","hidden","html","checkbox","name","number","page-break","password","paypal","phone","postdata","radio","section","select","slider","stripe","text","textarea","time","upload","url","signature"],"general_messages":{"calculation_error":"Failed to calculate field.","payment_require_ssl_error":"SSL required to submit this form, please check your URL.","payment_require_amount_error":"PayPal amount must be greater than 0.","form_has_error":"Please correct the errors before submission."},"payment_require_ssl":false,"has_loader":true,"loader_label":"Submitting...","calcs_memoize_time":300,"is_reset_enabled":true,"has_stripe":false,"has_paypal":false,"submit_button_class":""});
+               }
+
+               if (window.elementorFrontend) {
+                   if (typeof elementorFrontend.hooks !== "undefined") {
+                       elementorFrontend.hooks.addAction('frontend/element_ready/global', function () {
+                           runForminatorFront();
+                       });
+                   }
+               } else {
+                   runForminatorFront();
+               }
+
+                                       if (typeof ForminatorValidationErrors !== 'undefined') {
+                   var forminatorFrontSubmit = jQuery(ForminatorValidationErrors.selector).data('forminatorFrontSubmit');
+                   if (typeof forminatorFrontSubmit !== 'undefined') {
+                       forminatorFrontSubmit.show_messages(ForminatorValidationErrors.errors);
+                   }
+               }
+               if (typeof ForminatorFormHider !== 'undefined') {
+                   var forminatorFront = jQuery(ForminatorFormHider.selector).data('forminatorFront');
+                   if (typeof forminatorFront !== 'undefined') {
+                       jQuery(forminatorFront.forminator_selector).find('.forminator-row').hide();
+                       jQuery(forminatorFront.forminator_selector).find('.forminator-pagination-steps').hide();
+                       jQuery(forminatorFront.forminator_selector).find('.forminator-pagination-footer').hide();
+                   }
+               }
+               if (typeof ForminatorFormNewTabRedirect !== 'undefined') {
+                   var forminatorFront = ForminatorFormNewTabRedirect.url;
+                   if (typeof forminatorFront !== 'undefined') {
+                       window.open(ForminatorFormNewTabRedirect.url, '_blank');
+                   }
+               }
+           });
+       </script>
+           
+           <span class="et_pb_scroll_top et-pb-icon et-visible" style="display: inline;"></span>
+   
+
+
+
+
+
+<div aria-hidden="true" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(215, 215, 215); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px; border-radius: 4px; left: auto; top: -10000px; z-index: -2147483648; position: absolute; pointer-events: auto; transition: opacity 0.15s ease-out 0s; opacity: 0; visibility: hidden;"><div style="position: relative; z-index: 1;"><iframe src="https://newassets.hcaptcha.com/captcha/v1/7329d5a/static/hcaptcha.html#frame=challenge&amp;id=0vv47vx7iwn&amp;host=www.sussexprinting.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=off&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=502741fa-fce8-4cbb-bd5b-b2ad195745bb&amp;theme=light&amp;size=normal&amp;origin=https%3A%2F%2Fwww.sussexprinting.com" frameborder="0" scrolling="no" allow="private-state-token-issuance 'src'; private-state-token-redemption 'src'" title="Main content of the hCaptcha challenge" style="border: 0px; z-index: 2000000000; position: relative;"></iframe></div><div style="width: 100%; height: 100%; position: fixed; pointer-events: none; top: 0px; left: 0px; z-index: 0; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div style="border-width: 11px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 1; right: 100%;"><div style="border-width: 10px; border-style: solid; border-color: transparent rgb(255, 255, 255) transparent transparent; position: relative; top: 10px; z-index: 1;"></div><div style="border-width: 11px; border-style: solid; border-color: transparent rgb(215, 215, 215) transparent transparent; position: relative; top: -11px; z-index: 0;"></div></div></div><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
+
